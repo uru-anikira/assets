@@ -1,0 +1,195 @@
+/* ====== UCP: Stack labels above inputs (your existing approach) ====== */
+#FieldsOptional tr[id^="field_"],
+#FieldsOptional tr#field-birthday{display:block;margin-bottom:6px;}
+#FieldsOptional .pformleft,#ucpcontent .pformright{display:block;width:100%;}
+#FieldsOptional .pformleft{margin-bottom:6px;}
+#FieldsOptional .pformleft label{display:block;font-weight:700;}
+#FieldsOptional .pformright input,
+#FieldsOptional .pformright select,
+#FieldsOptional .pformright textarea{width:100%;box-sizing:border-box;}
+
+/* ====== Row 1: DOB + OOC Name side-by-side ====== */
+#ucpcontent tr#field-birthday,
+#ucpcontent tr#field_12{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(50% - 20px);
+  margin-bottom:6px;
+}
+#ucpcontent tr#field-birthday{margin-right:20px;}
+#ucpcontent tr#field_12{margin-right:0;}
+
+/* Keep DOB selects inline (override the 100% select rule) */
+#ucpcontent tr#field-birthday .pformright{white-space:nowrap;}
+#ucpcontent tr#field-birthday .pformright select{width:auto;display:inline-block;vertical-align:middle;margin-right:6px;}
+
+/* Responsive: stack DOB + OOC on smaller screens */
+@media (max-width:650px){
+  #ucpcontent tr#field-birthday,
+  #ucpcontent tr#field_12{width:100%;margin-right:0;}
+}
+
+/* ====== Skills: shared header row + 4-column skill selectors ====== */
+
+/* 1) Choose ONE “header field” row ID and put the shared description there.
+   Replace 999 below with the real header field ID you create (field_###). */
+#ucpcontent tr#field_22 .pformright{display:none;}
+#ucpcontent tr#field_22 {margin-bottom:8px;}
+#ucpcontent tr#field_22 .pformleft{margin-bottom:0;}
+#ucpcontent .pformleft { padding-right: 0px;}
+
+/* 2) Put the four skill fields on one row (25% each) */
+#ucpcontent tr#field_56,
+#ucpcontent tr#field_57,
+#ucpcontent tr#field_58,
+#ucpcontent tr#field_59{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(25% - 20px);
+  margin-right:16px;
+  margin-bottom:0;
+}
+#ucpcontent tr#field_59{margin-right:0;}
+
+/* 2a) Put the three rating fields on one row (33% each) */
+#ucpcontent tr#field_9,
+#ucpcontent tr#field_10,
+#ucpcontent tr#field_11{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(33% - 20px);
+  margin-right:16px;
+  margin-bottom:0;
+}
+
+/* 2b) Put the sub-breeds/dominant breeds on one row (50% each) */
+#ucpcontent tr#field_1,
+#ucpcontent tr#field_36{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(49% - 20px);
+  margin-right:10px;
+  margin-bottom:0;
+}
+
+/* 2c) Put the height/weight on one row (50% each) */
+#ucpcontent tr#field_5,
+#ucpcontent tr#field_6{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(50% - 20px);
+  margin-right:16px;
+  margin-bottom:0;
+}
+
+/* 2d) Put the eye/coat color on one row (50% each) */
+#ucpcontent tr#field_8,
+#ucpcontent tr#field_7{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(50% - 20px);
+  margin-right:16px;
+  margin-bottom:0;
+}
+
+/* 2e) Put the three rating fields on one row (33% each) */
+#ucpcontent tr#field_31,
+#ucpcontent tr#field_32,
+#ucpcontent tr#field_33{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(33% - 20px);
+  margin-right:16px;
+  margin-bottom:0;
+}
+
+/* 2f) Shrink Siteborn /Controller Dropdowns (25%) & + Mental Stability, inherited traits in-line */
+#ucpcontent tr#field_43,
+#ucpcontent tr#field_23,
+#ucpcontent tr#field_30,
+#ucpcontent tr#field_24,
+#ucpcontent tr#field_25{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(25% - 20px);
+  margin-right: 50%;
+  margin-bottom:0;
+}
+
+/* 2g) Put the mother/father on one row (50% each) */
+#ucpcontent tr#field_44,
+#ucpcontent tr#field_45{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(49% - 20px);
+  margin-right:16px;
+  margin-bottom:0;
+}
+
+
+/* 2h) Posting templates third-width (33% each) */
+#ucpcontent tr#field_13,
+#ucpcontent tr#field_14,
+#ucpcontent tr#field_15,
+#ucpcontent tr#field_16,
+#ucpcontent tr#field_17{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(33% - 20px);
+  margin-right:10px;
+  margin-bottom:0;
+}
+
+/* 2i) Resize Pack Rank and Mate fields to 50% width (50% each) */
+#ucpcontent tr#field_38,
+#ucpcontent tr#field_51{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(50% - 20px);
+  margin-right:48%;
+  margin-bottom:0;
+}
+
+/* 2j) Put the siblings/offspring areas on one row (50% each) */
+#ucpcontent tr#field_47,
+#ucpcontent tr#field_55{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(49% - 2px);
+  margin-right:0px;
+  margin-bottom:0;
+}
+
+#field_41_input, #field_2_input { min-height: 200px; }
+
+/* 3) Hide the duplicated description text in the 4 skill fields (keep the label) */
+#ucpcontent tr#field_56 .pformleft,
+#ucpcontent tr#field_57 .pformleft,
+#ucpcontent tr#field_58 .pformleft,
+#ucpcontent tr#field_59 .pformleft{font-size:0;margin-bottom:6px;}
+#ucpcontent tr#field_56 .pformleft label,
+#ucpcontent tr#field_57 .pformleft label,
+#ucpcontent tr#field_58 .pformleft label,
+#ucpcontent tr#field_59 .pformleft label{font-size:13px;}
+
+/* Make the selects fill their column nicely */
+#ucpcontent tr#field_56 .pformright select,
+#ucpcontent tr#field_57 .pformright select,
+#ucpcontent tr#field_58 .pformright select,
+#ucpcontent tr#field_59 .pformright select{width:100%;}
+
+/* Responsive: stack skill fields if needed */
+@media (max-width:650px){
+  #ucpcontent tr#field_56,
+  #ucpcontent tr#field_57,
+  #ucpcontent tr#field_58,
+  #ucpcontent tr#field_59{width:100%;margin-right:0;margin-bottom:6px;}
+}
+
+#ucpcontent .pformleft { border: 0; }
+
+#ucpcontent tr { max-width: 98%;}
+
+#ucpcontent .pformleft br{
+  display:none;
+}
