@@ -91,7 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "field_2","field_43","field_49","field_44","field_45","field_46","field_66","field_56","field_57","field_58","field_59",
     "field_9","field_10","field_11","field_39","field_30","field_31","field_32","field_33","field_28","field_34","field_35",
     "field_41","field_47","field_48","field_55","field_13","field_14","field_15","field_16","field_17","field_38","field_51",
-    "field_50","field_64","field_22","field_24","field_23","field_72","field_73","field_74","field_75","field_76","field_77","field_78","field_79","field_25"
+    "field_50","field_64","field_22","field_24","field_23","field_72","field_73","field_74","field_75","field_76","field_77",
+    "field_78","field_79","field_25","field_80","field_81","field_82","field_83","field_84"
   ]);
 
   /* ---------- 7) Hide rank for accounts not in a pack group --------- */
@@ -322,7 +323,7 @@ function setRowDisplay(rowId, show){
     // New controller: any group where field_24 is visible
     {
       controllerRowId: "field_23",
-      dependentRowIds: ["field_13","field_14","field_15","field_16","field_17"],
+      dependentRowIds: ["field_13","field_14","field_15","field_16","field_17","field_80","field_81","field_82","field_83","field_84"],
       showWhenValues: ["y","yes"]
       // no group restriction => applies anywhere field_24 exists+is visible
     },
