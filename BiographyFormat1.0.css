@@ -140,6 +140,19 @@
   margin-bottom:0;
 }
 
+/* 2h.1) Posting template name labels third-width (33% each) */
+#ucpcontent tr#field_80,
+#ucpcontent tr#field_81,
+#ucpcontent tr#field_82,
+#ucpcontent tr#field_83,
+#ucpcontent tr#field_84{
+  display:inline-block;
+  vertical-align:top;
+  width:calc(33% - 20px);
+  margin-right:10px;
+  margin-bottom:0;
+}
+
 /* 2i) Resize Pack Rank and Mate fields to 50% width (50% each) */
 #ucpcontent tr#field_38,
 #ucpcontent tr#field_51{
