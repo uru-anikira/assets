@@ -38,3 +38,26 @@ function bbcode_replacer(str) {
 }
 
 $(".replaceBBCode").each(function() { $(this).html( bbcode_replacer($(this).html()) ); });
+
+/** IBStore one-click functions by FizzyElf  -- https://fizzyelf.jcink.net **/
+async function BuyStoreItem(itemid, keyword) {
+    let data = await $.get(`/index.php?act=store&code=buyitem&itemid=${itemid}`);
+    let lnk = '';
+    if (keyword) {
+        data = await $.get('/index.php?act=store&code=inventory');
+        if ($(`#ucpcontent tr:contains(${keyword})`, data).length)
+            lnk = $(`#ucpcontent tr:contains(${keyword})`, data).first().find('a:contains(Use Item)').attr('href');
+    }
+    return lnk;
+}
+
+async function BuyUseStoreItem(itemid, keyword) {
+    let lnk = await BuyStoreItem(itemid, keyword);
+    await $.get(lnk);
+}
+
+async function BuyAwardStoreItem(itemid, keyword, username) {
+    let lnk = await BuyStoreItem(itemid, keyword);
+    lnk = lnk.replace('code=useitem', 'code=do_useitem');
+    await $.post(lnk, {username, change: 'Give'});
+}
