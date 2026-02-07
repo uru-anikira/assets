@@ -153,6 +153,8 @@
   margin-bottom:0;
 }
 
+#ucpcontent tr#field_84{margin-right:20%;}
+
 /* 2i) Resize Pack Rank and Mate fields to 50% width (50% each) */
 #ucpcontent tr#field_38,
 #ucpcontent tr#field_51{
