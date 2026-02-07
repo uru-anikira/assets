@@ -46,6 +46,12 @@ console.log("TagGroupConfigs loaded", !!window.jQuery);
       vanir: vanirActivity
     };
 
+    // ✅ expose config objects for other scripts (e.g., TagButtons1.25.js)
+    window.tagSkills  = tagSkills;
+    window.tagThread  = tagThread;
+    window.tagWarning = tagWarning;
+    window.tagGroups  = tagGroups;
+
     function resolveTag(tag) {
       tag = String(tag).toLowerCase();
       for (const group in tagGroups) {
@@ -53,6 +59,9 @@ console.log("TagGroupConfigs loaded", !!window.jQuery);
       }
       return null;
     }
+
+    // ✅ expose helpers too (safe; in case other scripts call them)
+    window.resolveTag = resolveTag;
 
     function parseTags($container, prepend = true) {
       $container.each(function(){
@@ -81,6 +90,9 @@ console.log("TagGroupConfigs loaded", !!window.jQuery);
         else $(this).append($tags);
       });
     }
+
+    // ✅ expose parser too (optional but helpful)
+    window.parseTags = parseTags;
 
     // --- Run after DOM + jQuery are ready --- //
     parseTags($(".posttitle"), true);
