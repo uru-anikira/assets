@@ -1,0 +1,431 @@
+/****************************************
+  MEMBER GROUP STYLING (JCINK)
+  - Boxes ONLY inside #memberformat
+  - Everywhere else = plain color / gradient text only
+*****************************************/
+
+/* =====================================================
+   GLOBAL (EVERYWHERE): TEXT-ONLY COLORING
+   Supports BOTH:
+   1) <span class="mgBadge" data-mg="Aesir">
+   2) <span class="Aesir">
+   ===================================================== */
+
+/* Default: mgBadge behaves like a normal inline wrapper outside memberformat */
+.mgBadge{
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: transparent !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.mgBadge a{ color: inherit; text-decoration: none; }
+
+/* ---------- SOLIDS (both wrapper types) ---------- */
+.mgBadge[data-mg="Aesir"], .Aesir{ color: var(--mg-aesir) !important; }
+.mgBadge[data-mg="Ilmatar"], .Ilmatar{ color: var(--mg-ilmatar) !important; }
+.mgBadge[data-mg="Irkalla"], .Irkalla{ color: var(--mg-irkalla) !important; }
+.mgBadge[data-mg="Impium"], .Impium{ color: var(--mg-impium) !important; }
+.mgBadge[data-mg="Kairos"], .Kairos{ color: var(--mg-kairos) !important; }
+.mgBadge[data-mg="Khalsa"], .Khalsa{ color: var(--mg-khalsa) !important; }
+.mgBadge[data-mg="Sanctum"], .Sanctum{ color: var(--mg-sanctum) !important; }
+.mgBadge[data-mg="Solmani"], .Solmani{ color: var(--mg-solmani) !important; }
+.mgBadge[data-mg="Theseus"], .Theseus{ color: var(--mg-theseus) !important; }
+.mgBadge[data-mg="Vanir"], .Vanir{ color: var(--mg-vanir) !important; }
+.mgBadge[data-mg="Loner"], .Loner{ color: var(--mg-loner) !important; }
+.mgBadge[data-mg="Ghost"], .Ghost{ color: var(--mg-ghost) !important; }
+.mgBadge[data-mg="New"], .New{ color: var(--mg-new) !important; }
+.mgBadge[data-mg="Deceased"], .Deceased{ color: var(--mg-deceased) !important; }
+
+/* ---------- GRADIENT TEXT (Main, Away, Aevum, Corvus) ---------- */
+/* 1) If you’re using mgBadge + data-mgtype="grad" */
+.mgBadge[data-mgtype="grad"]{
+  background: var(--mg-grad) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Provide the gradient var per group (mgBadge) */
+.mgBadge[data-mg="Main"]   { --mg-grad: var(--mg-main-grad); }
+.mgBadge[data-mg="Away"]   { --mg-grad: var(--mg-away-grad); }
+.mgBadge[data-mg="Aevum"]  { --mg-grad: var(--mg-aevum-grad); }
+.mgBadge[data-mg="Corvus"] { --mg-grad: var(--mg-corvus-grad); }
+
+/* 2) If you’re still using legacy group wrapper classes */
+.Main   { background: var(--mg-main-grad) !important; }
+.Away   { background: var(--mg-away-grad) !important; }
+.Aevum  { background: var(--mg-aevum-grad) !important; }
+.Corvus { background: var(--mg-corvus-grad) !important; }
+
+.Main, .Away, .Aevum, .Corvus{
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+
+/* =====================================================
+   TAGGED USERS (@mentions) — text-only
+   (keeps working regardless of memberformat)
+   ===================================================== */
+a.user-tagged.mgroup-12{ background: var(--mg-main-grad) !important; }
+a.user-tagged.mgroup-21{ background: var(--mg-away-grad) !important; }
+a.user-tagged.mgroup-23{ background: var(--mg-aevum-grad) !important; }
+a.user-tagged.mgroup-19{ background: var(--mg-corvus-grad) !important; }
+
+a.user-tagged.mgroup-12,
+a.user-tagged.mgroup-21,
+a.user-tagged.mgroup-23,
+a.user-tagged.mgroup-19{
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+a.user-tagged.mgroup-6  { color: var(--mg-aesir) !important; }
+a.user-tagged.mgroup-18 { color: var(--mg-ilmatar) !important; }
+a.user-tagged.mgroup-16 { color: var(--mg-irkalla) !important; }
+a.user-tagged.mgroup-17 { color: var(--mg-impium) !important; }
+a.user-tagged.mgroup-7  { color: var(--mg-kairos) !important; }
+a.user-tagged.mgroup-8  { color: var(--mg-khalsa) !important; }
+a.user-tagged.mgroup-9  { color: var(--mg-sanctum) !important; }
+a.user-tagged.mgroup-10 { color: var(--mg-solmani) !important; }
+a.user-tagged.mgroup-11 { color: var(--mg-theseus) !important; }
+a.user-tagged.mgroup-22 { color: var(--mg-vanir) !important; }
+a.user-tagged.mgroup-14 { color: var(--mg-loner) !important; }
+a.user-tagged.mgroup-20 { color: var(--mg-ghost) !important; }
+a.user-tagged.mgroup-3  { color: var(--mg-new) !important; }
+a.user-tagged.mgroup-13 { color: var(--mg-deceased) !important; }
+
+
+/* =====================================================
+   1) COLOR TOKENS (EDIT THESE ONLY)
+   ===================================================== */
+:root{
+  /* Gradient groups */
+  --mg-main-grad:    linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+  --mg-staff-grad:   linear-gradient(to right, #CF1512 0%, #121FCF 100%);
+  --mg-aevum-grad:   linear-gradient(to right, #9eaec8 0%, #353a43 100%);
+  --mg-corvus-grad:  linear-gradient(to right, #04164d 0%, #916f14 100%);
+  --mg-legatus-grad: linear-gradient(to right, #009fbe 0%, #7700be 100%);
+  --mg-away-grad:    linear-gradient(to right, #3ea7b3 0%, #453eb3 100%);
+
+  /* Solid groups */
+  --mg-aesir:    #750f57;
+  --mg-ilmatar:  #DCBEF2;
+  --mg-irkalla:  #b36a6a;
+  --mg-impium:   #df6cbf;
+  --mg-kairos:   #a9000f;
+  --mg-khalsa:   #33ab4c;
+  --mg-sanctum:  #000000;
+  --mg-solmani:  #797979;
+  --mg-theseus:  #22626b;
+  --mg-vanir:    #61afdf;
+  --mg-loner:    #745200;
+  --mg-ghost:    #ffffff;
+  --mg-new:      #595cc7;
+  --mg-deceased: #41642f;
+}
+
+/* =====================================================
+   2) EVERYWHERE ELSE: TEXT-ONLY NAME COLORING
+   (Your normal group prefix/suffix spans + tagging links)
+   ===================================================== */
+
+/* Gradient text for normal wrappers (outside #memberformat) */
+.Main, .Staff, .Aevum, .Corvus, .Legatus, .Away{
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background: var(--mg-grad) !important;
+}
+.Main    { --mg-grad: var(--mg-main-grad); }
+.Staff   { --mg-grad: var(--mg-staff-grad); }
+.Aevum   { --mg-grad: var(--mg-aevum-grad); }
+.Corvus  { --mg-grad: var(--mg-corvus-grad); }
+.Legatus { --mg-grad: var(--mg-legatus-grad); }
+.Away    { --mg-grad: var(--mg-away-grad); }
+
+/* Solid text for normal wrappers (outside #memberformat) */
+.Aesir    { color: var(--mg-aesir) !important; }
+.Ilmatar  { color: var(--mg-ilmatar) !important; }
+.Irkalla  { color: var(--mg-irkalla) !important; }
+.Impium   { color: var(--mg-impium) !important; }
+.Kairos   { color: var(--mg-kairos) !important; }
+.Khalsa   { color: var(--mg-khalsa) !important; }
+.Sanctum  { color: var(--mg-sanctum) !important; }
+.Solmani  { color: var(--mg-solmani) !important; }
+.Theseus  { color: var(--mg-theseus) !important; }
+.Vanir    { color: var(--mg-vanir) !important; }
+.Loner    { color: var(--mg-loner) !important; }
+.Ghost    { color: var(--mg-ghost) !important; }
+.New      { color: var(--mg-new) !important; }
+.Deceased { color: var(--mg-deceased) !important; }
+
+/* Tagged users (Jcink @mentions) */
+a.user-tagged.mgroup-12{ --mg-grad: var(--mg-main-grad); }
+a.user-tagged.mgroup-4,
+a.user-tagged.mgroup-15{ --mg-grad: var(--mg-staff-grad); }
+a.user-tagged.mgroup-23{ --mg-grad: var(--mg-aevum-grad); }
+a.user-tagged.mgroup-19{ --mg-grad: var(--mg-corvus-grad); }
+a.user-tagged.mgroup-26{ --mg-grad: var(--mg-legatus-grad); }
+a.user-tagged.mgroup-21{ --mg-grad: var(--mg-away-grad); }
+
+a.user-tagged.mgroup-12,
+a.user-tagged.mgroup-4,
+a.user-tagged.mgroup-15,
+a.user-tagged.mgroup-23,
+a.user-tagged.mgroup-19,
+a.user-tagged.mgroup-26,
+a.user-tagged.mgroup-21{
+  background: var(--mg-grad) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+a.user-tagged.mgroup-6  { color: var(--mg-aesir) !important; }
+a.user-tagged.mgroup-18 { color: var(--mg-ilmatar) !important; }
+a.user-tagged.mgroup-16 { color: var(--mg-irkalla) !important; }
+a.user-tagged.mgroup-17 { color: var(--mg-impium) !important; }
+a.user-tagged.mgroup-7  { color: var(--mg-kairos) !important; }
+a.user-tagged.mgroup-8  { color: var(--mg-khalsa) !important; }
+a.user-tagged.mgroup-9  { color: var(--mg-sanctum) !important; }
+a.user-tagged.mgroup-10 { color: var(--mg-solmani) !important; }
+a.user-tagged.mgroup-11 { color: var(--mg-theseus) !important; }
+a.user-tagged.mgroup-22 { color: var(--mg-vanir) !important; }
+a.user-tagged.mgroup-14 { color: var(--mg-loner) !important; }
+a.user-tagged.mgroup-20 { color: var(--mg-ghost) !important; }
+a.user-tagged.mgroup-3  { color: var(--mg-new) !important; }
+a.user-tagged.mgroup-13 { color: var(--mg-deceased) !important; }
+
+
+/* =====================================================
+   3) MEMBERFORMAT ONLY: BOX BADGES
+   ===================================================== */
+
+/* Layout for #memberformat (justified + spacing) */
+#memberformat{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 2px;/* NEW: space for hover lift */
+  row-gap: 3px; /* requested bottom spacing */
+}
+
+/* Badge shell (scoped ONLY to #memberformat) */
+#memberformat .mgBadge{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+
+  border-radius: 0;
+  border: 1px solid var(--mg-border, rgba(255,255,255,.25));
+
+  white-space: nowrap;
+  text-decoration: none;
+
+  height: 24px;          /* consistent row height */
+  line-height: 1;
+  box-sizing: border-box;
+
+  background: transparent !important;
+  color: var(--mg-fg, inherit);
+
+  text-shadow: 0 0 2px rgba(0,0,0,.35);
+
+  margin: 0; /* spacing controlled by row-gap/space-between */
+}
+
+/* Ensure inner links don’t change height */
+#memberformat .mgBadge > a{
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Gradient border-only for memberformat (border-image = consistent sizing) */
+#memberformat .mgBadge[data-mgtype="grad"]{
+  background: transparent !important;
+
+  border: 1px solid transparent;
+  border-image-source: var(--mg-borderGrad);
+  border-image-slice: 1;
+
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  color: var(--mg-fg, #fff) !important;
+}
+
+/* Hover polish ONLY in memberformat */
+#memberformat .mgBadge{
+  transition: transform .12s ease, filter .12s ease;
+}
+#memberformat .mgBadge:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+
+/* =====================================================
+   4) MEMBERFORMAT: GROUP → BADGE VARIABLE MAPPINGS
+   (These only affect the badges inside #memberformat)
+   ===================================================== */
+
+/* SOLID (transparent interior, colored border + text) */
+#memberformat .mgBadge[data-mg="Aesir"]    { --mg-fg: var(--mg-aesir);    --mg-border: var(--mg-aesir); }
+#memberformat .mgBadge[data-mg="Ilmatar"]  { --mg-fg: var(--mg-ilmatar);  --mg-border: var(--mg-ilmatar); }
+#memberformat .mgBadge[data-mg="Irkalla"]  { --mg-fg: var(--mg-irkalla);  --mg-border: var(--mg-irkalla); }
+#memberformat .mgBadge[data-mg="Impium"]   { --mg-fg: var(--mg-impium);   --mg-border: var(--mg-impium); }
+#memberformat .mgBadge[data-mg="Kairos"]   { --mg-fg: var(--mg-kairos);   --mg-border: var(--mg-kairos); }
+#memberformat .mgBadge[data-mg="Khalsa"]   { --mg-fg: var(--mg-khalsa);   --mg-border: var(--mg-khalsa); }
+#memberformat .mgBadge[data-mg="Sanctum"]  { --mg-fg: var(--mg-sanctum);  --mg-border: var(--mg-sanctum); }
+#memberformat .mgBadge[data-mg="Solmani"]  { --mg-fg: var(--mg-solmani);  --mg-border: var(--mg-solmani); }
+#memberformat .mgBadge[data-mg="Theseus"]  { --mg-fg: var(--mg-theseus);  --mg-border: var(--mg-theseus); }
+#memberformat .mgBadge[data-mg="Vanir"]    { --mg-fg: var(--mg-vanir);    --mg-border: var(--mg-vanir); }
+#memberformat .mgBadge[data-mg="Loner"]    { --mg-fg: var(--mg-loner);    --mg-border: var(--mg-loner); }
+#memberformat .mgBadge[data-mg="Ghost"]    { --mg-fg: var(--mg-ghost);    --mg-border: rgba(255,255,255,.75); }
+#memberformat .mgBadge[data-mg="New"]      { --mg-fg: var(--mg-new);      --mg-border: var(--mg-new); }
+#memberformat .mgBadge[data-mg="Deceased"] { --mg-fg: var(--mg-deceased); --mg-border: var(--mg-deceased); }
+
+/* GRADIENT (border only; requires data-mgtype="grad" in memberformat markup) */
+#memberformat .mgBadge[data-mg="Main"]    { --mg-borderGrad: var(--mg-main-grad);    --mg-fg: #fff; }
+#memberformat .mgBadge[data-mg="Staff"]   { --mg-borderGrad: var(--mg-staff-grad);   --mg-fg: #fff; }
+#memberformat .mgBadge[data-mg="Aevum"]   { --mg-borderGrad: var(--mg-aevum-grad);   --mg-fg: #fff; }
+#memberformat .mgBadge[data-mg="Corvus"]  { --mg-borderGrad: var(--mg-corvus-grad);  --mg-fg: #fff; }
+#memberformat .mgBadge[data-mg="Legatus"] { --mg-borderGrad: var(--mg-legatus-grad); --mg-fg: #fff; }
+#memberformat .mgBadge[data-mg="Away"]    { --mg-borderGrad: var(--mg-away-grad);    --mg-fg: #fff; }
+
+
+/***********************************
+CUSTOM GROUP STYLING
+************************************/
+
+.g1, .g3 {
+--accentcolor: #fff;
+--accentcolorash: #fff;
+--stattext: #000;
+}
+
+.g6 {
+--accentcolor: var(--mg-aesir);
+--accentcolorash: var(--light);
+--stattext: var(--light);
+}
+
+.g7 {
+--accentcolor: var(--mg-kairos);
+--accentcolorash: var(--light);
+--stattext: var(--light);
+}
+
+.g8 {
+--accentcolor: var(--mg-khalsa);
+--accentcolorash: var(--light);
+--stattext: #fff;
+}
+
+.g9 {
+--accentcolor: var(--mg-sanctum);
+--accentcolorash: var(--light);
+--stattext: var(--light);
+}
+
+.g10 {
+--accentcolor: var(--mg-solmani);
+--accentcolorash: var(--light);
+--stattext: var(--light);
+}
+
+.g11 {
+--accentcolor: var(--mg-theseus);
+--accentcolorash: var(--light);
+--stattext: var(--light);
+}
+
+.g14 {
+--accentcolor: var(--mg-loner);
+--accentcolorash: var(--light);
+--stattext: var(--light);
+}
+
+.g16 {
+--accentcolor: var(--mg-irkalla);
+--accentcolorash: var(--light);
+--stattext: var(--light);
+}
+
+.g17 {
+--accentcolor: var(--mg-impium);
+--accentcolorash: var(--light);
+--stattext: var(--light);
+}
+
+.g18 {
+--accentcolor: var(--mg-ilmatar);
+--accentcolorash: var(--light);
+--stattext: #000;
+}
+
+.g19 {
+--accentcolor: var(--mg-corvus);
+--accentcolorash: var(--light);
+--stattext: var(--light);
+}
+
+.g20 {
+--accentcolor: var(--mg-ghost);
+--accentcolorash: var(--light);
+--stattext: #000;
+}
+
+.g22 {
+--accentcolor: var(--mg-vanir);
+--accentcolorash: var(--light);
+--stattext: var(--light);
+}
+
+.g4, .g12, .g15, .g21, .g23 {
+--accentcolor: var(--subbox);
+--stattext: #000000;
+}
+
+#skills_g4, #skills_g12, #skills_g15, #skills_g1 { display: none;}
+#agesex_g4, #agesex_g12, #agesex_g15, #agesex_g1 { display: none;}
+
+/* =====================================================
+   GRADIENT BORDERS
+   ===================================================== */
+.g23[data-mgtype="grad"] .memberlistbox{
+  border: 5px solid transparent;                 /* required for border-image */
+  border-image-source: var(--mg-aevum-grad);     /* reuse your existing token */
+  border-image-slice: 1;
+}
+
+
+.g4[data-mgtype="grad"] .memberlistbox, .g12[data-mgtype="grad"] .memberlistbox, .g15[data-mgtype="grad"] .memberlistbox{
+  border: 5px solid transparent;                 /* required for border-image */
+  border-image-source: var(--mg-main-grad);     /* reuse your existing token */
+  border-image-slice: 1;
+}
+
+.g21[data-mgtype="grad"] .memberlistbox{
+  border: 5px solid transparent;                 /* required for border-image */
+  border-image-source: var(--mg-away-grad);     /* reuse your existing token */
+  border-image-slice: 1;
+}
+
+#contentwrap{
+  flex-wrap: wrap;              /* allow items to wrap to next row */
+}
+
+#copyright{
+  flex: 0 0 100%;               /* take full row */
+  width: 100%;
+  order: 9999;                  /* push after main+sidebar */
+}
