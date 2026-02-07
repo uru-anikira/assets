@@ -1,0 +1,67 @@
+.tag {
+    float: right;          /* remove or change if you want left alignment */
+    display: inline-block;
+    border: 1px solid;
+    padding: 0 0.5em;
+    margin: 0.3em;
+    border-radius: 0.7em;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    background: #ddd;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: firebrick;
+}
+
+.threadhistoryprofile .tag-row {
+    display: flex;
+    flex-wrap: wrap;          /* allow tags to wrap to next line */
+    margin: 0.2em 0 0.5em 0;
+    max-width: 300px;          /* prevent overflow beyond container */
+    overflow-wrap: break-word;/* wrap long tags if needed */
+}
+
+.threadhistoryprofile .tag-row .tag {
+    float: none;              /* ensure left alignment */
+    margin: 0.2em 0.3em 0.2em 0;
+    white-space: nowrap;       /* keep tag text on one line */
+}
+
+/* Example: per group colors */
+.tag.warning  { background: #b13232; color: #fff; }
+.tag.skills   { background: #00afb7; color: #fff; }
+.tag.thread   { background: #5d5d5d; color: #fff; }
+.tag.aesir    { background: #750f57; color: #fff; }
+.tag.aevum    { background: #9eaec8; color: #fff; }
+.tag.impium   { background: #df6cbf; color: #fff; }
+.tag.ilmatar  { background: #DCBEF2; color: #fff; }
+.tag.irkalla  { background: #b36a6a; color: #fff; }
+.tag.kairos   { background: #a9000f; color: #fff; }
+.tag.khalsa   { background: #33ab4c; color: #fff; }
+.tag.sanctum  { background: #000000; color: #fff; }
+.tag.solmani  { background: #797979; color: #fff; }
+.tag.theseus  { background: #22626b; color: #fff; }
+.tag.vanir    { background: #61afdf; color: #fff; }
+
+/* existing optional overrides */
+.tag.plot, .tag.event, .tag.story, .tag.canon, .tag.open, .tag.npc, .tag.hold {
+    color: inherit;
+    background: #ccc;
+}
+
+.tag-grid button {
+    background: var(--backgrounded);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    font-size: 9px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 2px 6px;
+    text-decoration: none;
+    border: none;
+}
+
+.tag-section, .tag-subheader {
+    margin-bottom: 5px;
+}
