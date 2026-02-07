@@ -1,3 +1,5 @@
+console.log("TagGroupConfigs loaded", !!window.jQuery);
+
 (function($){
   $(function(){
 
