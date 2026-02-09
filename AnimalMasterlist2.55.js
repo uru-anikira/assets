@@ -548,8 +548,8 @@ const animals = [
     size: [ "Small" ],
     classification: [ "Prey" ],
 
-    companion: [ "true" ],
-    companionsize: [ "Small Companion" ],
+    companion: [],
+    companionsize: [],
 
     skill: [ "4" ],
     food: [ "1" ],
@@ -784,6 +784,7 @@ const animals = [
 
     companion: [],
     companionsize: [],
+    
     skill: [ "1" ],
     food: [ "0" ],
     partysize: [ "No Minimum" ]
@@ -1112,6 +1113,7 @@ const animals = [
     foodjuvenile: [ "13" ]
   }
 ];
+
 
 
 
