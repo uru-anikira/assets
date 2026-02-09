@@ -33,6 +33,14 @@ function AnkP_minSkill(p){
   return a.length ? Math.min(...a.map(Number)) : Infinity;
 }
 
+function AnkP_norm(s){
+  return String(s || "")
+    .toLowerCase()
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 /* ---------------------
    SEASON HELPERS
 --------------------- */
@@ -64,17 +72,28 @@ function AnkP_formatSeasons(p){
    LOCATION FILTER (AUTHORITATIVE)
 --------------------- */
 function AnkP_passesLocationFilter(p, validLocations, includeAllAreas){
-  const foundIn = AnkP_arr(p.foundIn);
-  const hasSpecific = foundIn.length > 0;
+  const foundInRaw = AnkP_arr(p.foundIn);
+  const hasSpecific = foundInRaw.length > 0;
 
-  if (!validLocations || validLocations.length === 0){
+  const validRaw = Array.isArray(validLocations) ? validLocations : [];
+  const validNorm = validRaw.map(AnkP_norm).filter(Boolean);
+
+  const foundNorm = foundInRaw.map(AnkP_norm).filter(Boolean);
+
+  // CASE 1: Page has NO validLocations
+  if (validNorm.length === 0){
     return !!includeAllAreas && !hasSpecific;
   }
+
+  // CASE 2/3: Page HAS validLocations
   if (!hasSpecific){
     return !!includeAllAreas;
   }
-  return foundIn.some(loc => validLocations.includes(loc));
+
+  // Specific-location plant → must intersect (normalized)
+  return foundNorm.some(loc => validNorm.includes(loc));
 }
+
 
 /* ---------------------
    FOUND IN RESOLUTION (DISPLAY ONLY)
