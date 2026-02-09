@@ -447,38 +447,6 @@ const animals = [
         food: ["6"],
         partysize: ["2 (6+ mo. old)"]
     },
-    {
-    id: "arcticfox",
-    name: "Arctic Fox",
-    image: "",
-    foundIn: ["Xayar Forest"],
-    weight: ["7-21 pounds"],
-    size: [ "Small" ],
-    classification: [ "Prey" ], 
-
-    companion: [ "true" ],
-    companionsize: [ "Small Companion" ],
-
-    skill: [ "4" ],
-    food: [ "1" ],
-    partysize: [ "No Minimum" ]
-  },
-  {
-    id: "arctichare",
-    name: "Arctic Hare",
-    image: "",
-    foundIn: [ "Xayar Forest" ],
-    weight: [ "6-11 pounds" ],
-    size: [ "Extra Small" ],
-    classification: [ "Prey" ], 
-
-    companion: [ "true" ], 
-    companionsize: [ "Small Companion" ], 
-
-    skill: [ "2" ],
-    food: [ "1" ],
-    partysize: [ "No Minimum" ]
-  },
   {
     id: "cottontailrabbit",
     name: "Desert Cottontail",
@@ -1144,5 +1112,6 @@ const animals = [
     foodjuvenile: [ "13" ]
   }
 ];
+
 
 
