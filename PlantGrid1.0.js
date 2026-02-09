@@ -159,6 +159,7 @@ function AnkP_populateSelect(selectEl, values){
 
 function renderSpeciesPlantGrid({
   containerId,
+  containerEl,
 
   // controls
   skillSlider,
@@ -178,7 +179,10 @@ function renderSpeciesPlantGrid({
 
   plantsList
 }){
-  const container = document.getElementById(containerId);
+  const container =
+    containerEl ||
+    (containerId ? document.getElementById(containerId) : null);
+
   if (!container) return;
   container.innerHTML = "";
 
