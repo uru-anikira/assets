@@ -480,22 +480,6 @@ const animals = [
     partysize: [ "No Minimum" ]
   },
   {
-    id: "easterngreysquirrel",
-    name: "Eastern Gray Squirrel",
-    image: "",
-    foundIn: [ "Tia'deli Mountains" ],
-    weight: [ "1-1.5 pounds" ],
-    size: [ "Extra Small" ],
-    classification: [ "Prey" ],
-
-    companion: [ "true" ],
-    companionsize: [ "Small Companion" ],
-
-    skill: [ "2" ],
-    food: [ "1" ],
-    partysize: [ "No Minimum" ]
-  },
-  {
     id: "cottontailrabbit",
     name: "Desert Cottontail",
     image: "",
@@ -1160,4 +1144,5 @@ const animals = [
     foodjuvenile: [ "13" ]
   }
 ];
+
 
