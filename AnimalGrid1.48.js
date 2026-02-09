@@ -36,6 +36,14 @@
     if (animal.foodjuvenile) return `${animal.foodjuvenile.join(", ")} [juvenile] ${animal.food.join(", ")} [adult]`;
     return animal.food.join(", ");
   }
+
+const DEFAULT_ANIMAL_IMG = "https://i.imgur.com/lqebLcv.png";
+
+function resolveAnimalImageSrc(animal){
+  const src = (animal && typeof animal.image === "string") ? animal.image.trim() : "";
+  return src ? src : DEFAULT_ANIMAL_IMG;
+}
+
   
   /* =====================================================
      LOCATION FILTER (AUTHORITATIVE LOGIC)
@@ -167,7 +175,8 @@
         div.id = a.id;
   
         div.innerHTML = `
-          <img src="${a.image}" alt="${a.name}">
+          <img src="${resolveAnimalImageSrc(a)}" alt="${a.name}"
+     onerror="this.onerror=null;this.src='https://i.imgur.com/lqebLcv.png';">
           <h2>
             ${a.name}
             ${isCompanion(a) ? " 🐺" : ""}
@@ -196,3 +205,4 @@
       });
   }
   
+
