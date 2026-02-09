@@ -263,16 +263,16 @@ function renderSpeciesPlantGrid({
       ].filter(Boolean).join("");
 
       const useLis = [
-        AnkP_liArr("Medicinal Application", p.medicinal),
+        AnkP_liArr("Medicinal", p.medicinal),
         AnkP_liArr("Treats", p.treats),
-        AnkP_liArr("Beneficial Parts", p.beneficial),
+        AnkP_liArr("Beneficial", p.beneficial),
         AnkP_liArr("Unique Use", p.uniqueuse)
       ].filter(Boolean).join("");
-
+      
       const riskLis = [
-        AnkP_liArr("Poisonous Parts", p.poisonous),
-        AnkP_liArr("Toxic If", p.toxic),
-        AnkP_liArr("Complications", p.complications)
+        AnkP_liArr("Toxic", p.toxic),
+        AnkP_liArr("Complications", p.complications),
+        AnkP_liArr("Poisonous", p.poisonous)
       ].filter(Boolean).join("");
 
       const div = document.createElement("div");
@@ -282,13 +282,13 @@ function renderSpeciesPlantGrid({
       div.innerHTML = `
         <h2 class="plant-name">${p.name || ""}</h2>
         <h2 class="plant-scientific"><i>${p.scientific || ""}</i></h2>
-
+      
         ${desc ? `<div class="plant-desc">${desc}</div>` : ""}
-
+      
         ${metaLis ? `<ul class="plant-meta">${metaLis}</ul>` : ""}
-
+      
         ${useLis ? `<ul class="plant-use">${useLis}</ul>` : ""}
-
+      
         ${riskLis ? `<ul class="plant-risk">${riskLis}</ul>` : ""}
       `;
 
