@@ -3,8 +3,8 @@ const plants = [
         id: "aghada",
         name: "Aghada Leaf",
         scientific: "Achyranthens Aspera",
-        foundIn: ["Irengu Plains", "Rynack"],
-        description: "Grows in shade of trees, inverted cone with pale yellow bristled flower",
+        foundIn: [],
+        description: "Grows in shade of trees, inverted cone with pale yellow bristled flower.",
         seasons: ["Spring, Summer"],
         skill: ["2"],
         potency: ["1"],
@@ -12,7 +12,7 @@ const plants = [
         poisonous: [],
                   
         medicinal: ["Ingestion"],
-        treats: ["Cough","Fever","Pain Relief"],
+        treats: ["Cough","Fever","Pain"],
       
         toxic: [],
         complications: [],
@@ -24,29 +24,8 @@ const plants = [
         id: "agrimony",
         name: "Agrimony",
         scientific: "Agrimonia Eupatoria",
-        foundIn: ["Irengu Plains", "Rynack"],
-        description: "Grows in shaded areas, clustered plant with five petal yellow flowers",
-        seasons: ["Spring, Summer"],
-        skill: ["3"],
-        potency: ["1"],
-        beneficial: ["Flower"],
-        poisonous: [],
-                  
-        medicinal: ["Topical"],
-        treats: ["Pain Relief","Accelerate Healing"],
-      
-        toxic: ["Ingestion"],
-        complications: ["Nausea","Death"],
-
-        native: ["No"],
-        uniqueuse: []
-      },
-      {
-        id: "angelica",
-        name: "Angelica",
-        scientific: "Angelica Archangelica",
-        foundIn: ["Irengu Plains", "Rynack"],
-        description: "Grows in shaded areas, clustered plant with five petal yellow flowers",
+        foundIn: [],
+        description: "Grows at the base of trees and in shaded areas, clustered plant with five petal yellow flowers.",
         seasons: ["Spring, Summer"],
         skill: ["3"],
         potency: ["1"],
@@ -56,8 +35,29 @@ const plants = [
         medicinal: ["Topical"],
         treats: ["Pain","Accelerate Healing"],
       
+        toxic: [],
+        complications: [],
+
+        native: ["No"],
+        uniqueuse: []
+      },
+      {
+        id: "angelica",
+        name: "Angelica",
+        scientific: "Angelica Archangelica",
+        foundIn: [],
+        description: "Grows in open, sunny areas and is frequently found in large clusters of prickly white flowers.",
+        seasons: ["Spring, Summer"],
+        skill: ["4"],
+        potency: ["2"],
+        beneficial: ["Flower"],
+        poisonous: ["Flower"],
+                  
+        medicinal: ["Ingestion","Inhalation"],
+        treats: ["Stomach Pain","Sedative"],
+      
         toxic: ["Ingestion"],
-        complications: ["Nausea","Death"],
+        complications: ["Addiction"],
 
         native: ["No"],
         uniqueuse: []
@@ -81,6 +81,6 @@ const plants = [
         complications: ["Nausea","Death","Death but Harder"],
 
         native: ["Yes"],
-        uniqueuse: ["Character develops spontaneous heart disease."]
+        uniqueuse: ["Character develops spontaneous heart disease. This is a test plant, please disregard."]
       }
 ];
