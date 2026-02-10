@@ -166,5 +166,26 @@ const plants = [
 
         native: ["No"],
         uniqueuse: []
+      },
+          {
+        id: "dummy",
+        name: "Test Plant",
+        scientific: "Troubleshooticus Maximus",
+        foundIn: ["Tia'deli Mountains","Issimor Caverns"],
+        description: "Hey look a plant.",
+        seasons: ["Spring", "Summer"],
+        skill: ["3"],
+        potency: ["2"],
+        beneficial: [],
+        poisonous: [],
+                  
+        medicinal: [],
+        treats: [],
+      
+        toxic: ["Flowers"],
+        complications: ["Gay Panic"],
+
+        native: ["Yes"],
+        uniqueuse: ["Realigns the tingly bits."]
       }
 ];
