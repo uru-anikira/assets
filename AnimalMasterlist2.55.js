@@ -337,7 +337,7 @@ const animals = [
     id: "africanlion",
     name: "African Lion",
     image: "https://i.imgur.com/HwW7J5j.png",
-    foundIn: ["Chamoru Plains", "Xin Grotto", "Kalu's Point", "On-aldirr Crevice", "Tor's Marsh", "Desakin Crater", "Chamoru Plains", "Angel's Fangs"],
+    foundIn: ["Chamoru Plains", "Xin Grotto", "Kalus's Point", "On-aldirr Crevice", "Tor's Marsh", "Desakin Crater", "Chamoru Plains", "Angel's Fangs"],
     weight: ["250-450 pounds"],
     size: ["Extra Large"],
     classification: ["Predator"],
@@ -1113,6 +1113,7 @@ const animals = [
     foodjuvenile: [ "13" ]
   }
 ];
+
 
 
 
