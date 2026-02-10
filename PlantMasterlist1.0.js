@@ -1,4 +1,4 @@
-window.plants = [
+const plants = [
     {
         id: "aghada",
         name: "Aghada Leaf",
