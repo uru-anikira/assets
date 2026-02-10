@@ -171,7 +171,7 @@ const plants = [
         id: "dummy",
         name: "Test Plant",
         scientific: "Troubleshooticus Maximus",
-        foundIn: ["Tia'deli Mountains","Issimor Caverns"],
+        foundIn: ["Tia'deli Mountains","Issimor Caverns","Rynack","Sands of Rodorr"],
         description: "Hey look a plant.",
         seasons: ["Spring", "Summer"],
         skill: ["3"],
