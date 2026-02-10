@@ -184,6 +184,7 @@ function renderSpeciesPlantGrid({
   skillSlider,
   helpfulCheckbox,
   harmfulCheckbox,
+  inSeasonOnlyCheckbox,
   treatsSelect,
   sideEffectsSelect,
   searchInput,
@@ -220,26 +221,36 @@ function renderSpeciesPlantGrid({
   const searchTerm = searchInput ? searchInput.value.trim().toLowerCase() : "";
 
   list
-    .filter(p => {
-      if (!AnkP_passesLocationFilter(p, validLocations, includeAllAreas)) return false;
-      if (skillSlider && skillMin < AnkP_minSkill(p)) return false;
+      .filter(p => {
+        // 1. Location gate (hard requirement)
+        if (!AnkP_passesLocationFilter(p, validLocations, includeAllAreas)) return false;
+      
+        // 2. Skill gate
+        if (skillSlider && skillMin < AnkP_minSkill(p)) return false;
+      
+        // 3. In-season gate (NEW, independent)
+        if (inSeasonOnly && !AnkP_isInSeason(p)) return false;
+      
+        // 4. Helpful / Harmful gate
+        if (helpfulOn || harmfulOn){
+          const okHelpful = helpfulOn && AnkP_isHelpful(p);
+          const okHarmful = harmfulOn && AnkP_isHarmful(p);
+          if (!(okHelpful || okHarmful)) return false;
+        }
+      
+        // 5. Dropdown filters
+        if (treatPick && !AnkP_arr(p.treats).includes(treatPick)) return false;
+        if (sidePick  && !AnkP_arr(p.complications).includes(sidePick)) return false;
+      
+        // 6. Name search (display name only)
+        if (searchTerm){
+          const nm = String(p.name || "").toLowerCase();
+          if (!nm.includes(searchTerm)) return false;
+        }
+      
+        return true;
+      })
 
-      if (helpfulOn || harmfulOn){
-        const okHelpful = helpfulOn && AnkP_isHelpful(p);
-        const okHarmful = harmfulOn && AnkP_isHarmful(p);
-        if (!(okHelpful || okHarmful)) return false;
-      }
-
-      if (treatPick && !AnkP_arr(p.treats).includes(treatPick)) return false;
-      if (sidePick  && !AnkP_arr(p.complications).includes(sidePick)) return false;
-
-      if (searchTerm){
-        const nm = String(p.name || "").toLowerCase();
-        if (!nm.includes(searchTerm)) return false;
-      }
-
-      return true;
-    })
     .sort((a,b) => String(a.name||"").localeCompare(String(b.name||"")))
     .forEach(p => {
       const foundInDisplay = AnkP_resolveFoundIn(p, {
