@@ -72,25 +72,25 @@ function AnkP_formatSeasons(p){
    LOCATION FILTER (AUTHORITATIVE)
 --------------------- */
 function AnkP_passesLocationFilter(p, validLocations, includeAllAreas){
-  const foundInRaw = AnkP_arr(p.foundIn);
-  const hasSpecific = foundInRaw.length > 0;
+  const foundIn = AnkP_arr(p.foundIn);
+  const hasSpecific = foundIn.length > 0;
 
-  const validRaw = Array.isArray(validLocations) ? validLocations : [];
-  const validNorm = validRaw.map(AnkP_norm).filter(Boolean);
+  // Normalize
+  const validNorm = (validLocations || []).map(AnkP_norm);
+  const foundNorm = foundIn.map(AnkP_norm);
 
-  const foundNorm = foundInRaw.map(AnkP_norm).filter(Boolean);
-
-  // CASE 1: Page has NO validLocations
+  // No board context → only allow globals if includeAllAreas
   if (validNorm.length === 0){
-    return !!includeAllAreas && !hasSpecific;
+    return includeAllAreas && !hasSpecific;
   }
 
-  // CASE 2/3: Page HAS validLocations
+  // Global plant
   if (!hasSpecific){
-    return !!includeAllAreas;
+    return includeAllAreas;
   }
 
-  // Specific-location plant → must intersect (normalized)
+  // ✅ KEY FIX:
+  // Allow if *any* foundIn matches this board
   return foundNorm.some(loc => validNorm.includes(loc));
 }
 
