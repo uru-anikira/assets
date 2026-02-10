@@ -59,8 +59,8 @@ const animals = [
     size: ["Large"],
     classification: ["Prey"],
               
-    companion: ["true"],
-    companionsize: ["Large Companion"],
+    companion: [],
+    companionsize: [],
   
     skilljuvenile: ["8"],
     foodjuvenile: ["4"],
@@ -259,8 +259,8 @@ const animals = [
     size: ["Mid-Large"],
     classification: ["Prey"],
               
-    companion: ["true"],
-    companionsize: ["Large Companion"],
+    companion: [],
+    companionsize: [],
   
     skilljuvenile: ["6"],
     foodjuvenile: ["4"],
@@ -472,8 +472,8 @@ const animals = [
     size: [ "Extra Large" ],
     classification: [ "Prey" ],
 
-    companion: [ "true" ],
-    companionsize: [ "Large Companion" ],
+    companion: [],
+    companionsize: [],
 
     skill: [ "17" ],
     food: [ "14" ],
@@ -878,8 +878,8 @@ const animals = [
     size: [ "Extra Small" ],
     classification: [ "Prey" ],
 
-    companion: [ "true" ],
-    companionsize: [ "Small Companion" ],
+    companion: [],
+    companionsize: [],
 
     skill: [ "1" ],
     food: [ "0" ],
@@ -1011,8 +1011,10 @@ const animals = [
     weight: [ "0.5-4 pounds" ],
     size: [ "Extra Small" ],
     classification: [ "Prey" ],
-    companion: [ "true" ],
-    companionsize: [ "Small Companion" ],
+    
+    companion: [],
+    companionsize: [],
+    
     skill: [ "2" ],
     food: [ "1" ],
     partysize: [ "No Minimum" ]
@@ -1026,8 +1028,8 @@ const animals = [
     size: [ "Extra Large" ],
     classification: [ "Prey" ],
 
-    companion: [ "true" ],
-    companionsize: [ "Large Companion" ],
+    companion: [],
+    companionsize: [],
 
     skill: [ "19" ],
     food: [ "14" ],
@@ -1113,6 +1115,7 @@ const animals = [
     foodjuvenile: [ "13" ]
   }
 ];
+
 
 
 
