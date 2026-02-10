@@ -74,24 +74,37 @@ function resolveAnimalImageSrc(animal){
      ===================================================== */
   
 function resolveFoundIn(animal, {
-  useParentBoard,
+  parentBoardMapping,
   validLocations,
-  includeAllAreas
+  includeAllAreas,
+  collapseFoundInToParent
 }) {
   // Global animal
   if (!animal.foundIn || animal.foundIn.length === 0) {
     return includeAllAreas ? ["All Areas"] : [];
   }
 
-  // If no scope, show all foundIn
-  if (!validLocations || validLocations.length === 0) return animal.foundIn;
+  // If we have a scope, prefer showing only scope hits
+  let list = animal.foundIn;
+  if (Array.isArray(validLocations) && validLocations.length) {
+    const hits = animal.foundIn.filter(loc => validLocations.includes(loc));
+    if (hits.length) list = hits;
+  }
 
-  // Show only locations relevant to the current page scope
-  const hits = animal.foundIn.filter(loc => validLocations.includes(loc));
+  // DISPLAY MODE: collapse to parent region names when requested
+  if (collapseFoundInToParent && Array.isArray(parentBoardMapping)) {
+    const parents = new Set();
+    list.forEach(loc => {
+      const parent = parentBoardMapping.find(p => Array.isArray(p.subregions) && p.subregions.includes(loc));
+      if (parent?.parentName) parents.add(parent.parentName);
+    });
+    return parents.size ? Array.from(parents) : list;
+  }
 
-  // Fallback safety: if intersection yields nothing, show full list
-  return hits.length ? hits : animal.foundIn;
+  // Default: show subregions
+  return list;
 }
+
 
   
   /* =====================================================
@@ -194,4 +207,5 @@ function resolveFoundIn(animal, {
       });
   }
   
+
 
