@@ -188,6 +188,7 @@ function renderSpeciesPlantGrid({
   treatsSelect,
   sideEffectsSelect,
   searchInput,
+  inSeasonOnly = false,
 
   // configs
   validLocations = [],
@@ -213,6 +214,7 @@ function renderSpeciesPlantGrid({
 
   const helpfulOn = !!(helpfulCheckbox && helpfulCheckbox.checked);
   const harmfulOn = !!(harmfulCheckbox && harmfulCheckbox.checked);
+  const inSeasonCheckbox = panel.querySelector("#showInSeasonOnly");
 
   const treatPick = treatsSelect ? String(treatsSelect.value || "").trim() : "";
   const sidePick  = sideEffectsSelect ? String(sideEffectsSelect.value || "").trim() : "";
