@@ -116,20 +116,20 @@ function AnkP_liArr(label, value){
 
 /* ---------------------
    DROPDOWNS
-   Treats => medicinal
+   Treats => treats
    Side Effects => complications
 --------------------- */
 function AnkP_collectDropdowns(plantsList){
   const list = AnkP_asArray(plantsList);
-  const medicinal = new Set();
+  const treats = new Set();
   const complications = new Set();
 
   list.forEach(p => {
-    AnkP_arr(p.medicinal).forEach(t => medicinal.add(t));
+    AnkP_arr(p.treats).forEach(t => treats.add(t));
     AnkP_arr(p.complications).forEach(c => complications.add(c));
   });
 
-  return { treats: Array.from(medicinal), sideEffects: Array.from(complications) };
+  return { treats: Array.from(treats), sideEffects: Array.from(complications) };
 }
 function AnkP_populateSelect(selectEl, values){
   if (!selectEl) return;
@@ -186,32 +186,32 @@ function renderSpeciesPlantGrid({
 
   const searchTerm = searchInput ? searchInput.value.trim().toLowerCase() : "";
 
-  list
-    .filter(p => {
-      if (!AnkP_passesLocationFilter(p, validLocations, includeAllAreas)) return false;
-      if (skillSlider && skillMin < AnkP_minSkill(p)) return false;
+   list
+     .filter(p => {
+       if (!AnkP_passesLocationFilter(p, validLocations, includeAllAreas)) return false;
+       if (skillSlider && skillMin < AnkP_minSkill(p)) return false;
+   
+       if (inSeasonOnly && !AnkP_isInSeason(p)) return false;
+   
+       if (helpfulOn || harmfulOn){
+         const okHelpful = helpfulOn && AnkP_isHelpful(p);
+         const okHarmful = harmfulOn && AnkP_isHarmful(p);
+         if (!(okHelpful || okHarmful)) return false;
+       }
+   
+       // 👇 THIS LINE IS ITEM (2)
+       if (treatPick && !AnkP_arr(p.treats).includes(treatPick)) return false;
+   
+       if (sidePick && !AnkP_arr(p.complications).includes(sidePick)) return false;
+   
+       if (searchTerm){
+         const nm = String(p.name || "").toLowerCase();
+         if (!nm.includes(searchTerm)) return false;
+       }
+   
+       return true;
+     })
 
-      if (inSeasonOnly && !AnkP_isInSeason(p)) return false;
-
-      if (helpfulOn || harmfulOn){
-        const okHelpful = helpfulOn && AnkP_isHelpful(p);
-        const okHarmful = harmfulOn && AnkP_isHarmful(p);
-        if (!(okHelpful || okHarmful)) return false;
-      }
-
-      // Treats dropdown maps to medicinal
-      if (treatPick && !AnkP_arr(p.medicinal).includes(treatPick)) return false;
-
-      // Side effects dropdown maps to complications
-      if (sidePick && !AnkP_arr(p.complications).includes(sidePick)) return false;
-
-      if (searchTerm){
-        const nm = String(p.name || "").toLowerCase();
-        if (!nm.includes(searchTerm)) return false;
-      }
-
-      return true;
-    })
     .sort((a,b) => String(a.name||"").localeCompare(String(b.name||"")))
     .forEach(p => {
       const foundInDisplay = AnkP_resolveFoundIn(p, { parentBoardMapping, useParentBoard, validLocations, includeAllAreas });
