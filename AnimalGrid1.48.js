@@ -73,36 +73,26 @@ function resolveAnimalImageSrc(animal){
      FOUND IN RESOLUTION (DISPLAY ONLY)
      ===================================================== */
   
-  function resolveFoundIn(animal, {
-    parentBoardMapping,
-    useParentBoard,
-    validLocations,
-    includeAllAreas
-  }) {
-    // Global animal
-    if (!animal.foundIn || animal.foundIn.length === 0) {
-      return includeAllAreas ? ["All Areas"] : [];
-    }
-  
-    // No parent collapsing
-    if (!useParentBoard) {
-      return animal.foundIn.filter(loc =>
-        validLocations.length === 0 || validLocations.includes(loc)
-      );
-    }
-  
-    // Collapse to parent boards
-    const parents = new Set();
-    animal.foundIn.forEach(loc => {
-      const parent = parentBoardMapping.find(p =>
-        p.subregions.includes(loc)
-      );
-      if (parent) parents.add(parent.parentName);
-    });
-  
-    // Fallback safety
-    return parents.size ? Array.from(parents) : animal.foundIn;
+function resolveFoundIn(animal, {
+  useParentBoard,
+  validLocations,
+  includeAllAreas
+}) {
+  // Global animal
+  if (!animal.foundIn || animal.foundIn.length === 0) {
+    return includeAllAreas ? ["All Areas"] : [];
   }
+
+  // If no scope, show all foundIn
+  if (!validLocations || validLocations.length === 0) return animal.foundIn;
+
+  // Show only locations relevant to the current page scope
+  const hits = animal.foundIn.filter(loc => validLocations.includes(loc));
+
+  // Fallback safety: if intersection yields nothing, show full list
+  return hits.length ? hits : animal.foundIn;
+}
+
   
   /* =====================================================
      GENERIC RENDERER (NULL SAFE)
@@ -163,12 +153,11 @@ function resolveAnimalImageSrc(animal){
       })
       .sort((a, b) => a.name.localeCompare(b.name))
       .forEach(a => {
-        const foundIn = resolveFoundIn(a, {
-          parentBoardMapping,
-          useParentBoard,
-          validLocations,
-          includeAllAreas
-        });
+         const foundIn = resolveFoundIn(a, {
+           useParentBoard,
+           validLocations,
+           includeAllAreas
+         });
   
         const div = document.createElement("div");
         div.className = "species-box";
