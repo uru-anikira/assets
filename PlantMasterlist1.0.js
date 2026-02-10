@@ -33,7 +33,7 @@ const plants = [
         poisonous: [],
                   
         medicinal: ["Topical"],
-        treats: ["Pain","Accelerate Healing"],
+        treats: ["Pain Relief","Accelerate Healing"],
       
         toxic: ["Ingestion"],
         complications: ["Nausea","Death"],
@@ -61,5 +61,26 @@ const plants = [
 
         native: ["No"],
         uniqueuse: []
+      },
+      {
+        id: "testing",
+        name: "Demon Weed",
+        scientific: "Assicus Blasticus",
+        foundIn: ["Irengu Plains", "Craub"],
+        description: "It grows where the sun meets the earth when the world collapses into a wormhole of doom.",
+        seasons: ["Spring, Summer, Winter, Fall"],
+        skill: ["8"],
+        potency: ["4"],
+        beneficial: ["Flower"],
+        poisonous: ["Leaves"],
+                  
+        medicinal: ["Topical","Ingestion"],
+        treats: ["Pain","Accelerate Healing"],
+      
+        toxic: ["Ingestion"],
+        complications: ["Nausea","Death","Death but Harder"],
+
+        native: ["Yes"],
+        uniqueuse: ["Character develops spontaneous heart disease."]
       }
 ];
