@@ -84,6 +84,48 @@ const plants = [
         uniqueuse: []
       },
       {
+        id: "benthi",
+        name: "Benthi",
+        scientific: "Nicotiana Benthamianaaa",
+        foundIn: [],
+        description: "Grows in warm regions in full sunlight. Typically found as a single plant with wide, rounded green leaves.",
+        seasons: ["Spring", "Summer", "Fall"],
+        skill: ["1"],
+        potency: ["1"],
+        beneficial: ["Leaves"],
+        poisonous: ["Leaves"],
+                  
+        medicinal: ["Ingestion","Inhalation"],
+        treats: ["Exhaustion","Fainting"],
+      
+        toxic: ["Ingestion"],
+        complications: ["Addiction"],
+
+        native: ["No"],
+        uniqueuse: []
+      },
+      {
+        id: "birchbark",
+        name: "Birch Bark",
+        scientific: "Betula Pendula",
+        foundIn: [],
+        description: "Pale, lean trees with shedding bark that can be found in most regions except the hottest deserts.",
+        seasons: ["Spring", "Summer", "Fall"],
+        skill: ["1"],
+        potency: ["1"],
+        beneficial: ["Bark"],
+        poisonous: [],
+                  
+        medicinal: ["Ingestion","Inhalation"],
+        treats: ["Nausea","Fever"],
+      
+        toxic: [],
+        complications: [],
+
+        native: ["No"],
+        uniqueuse: []
+      },
+      {
         id: "testing",
         name: "Demon Weed",
         scientific: "Assicus Blasticus",
