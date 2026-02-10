@@ -95,11 +95,17 @@ const parentBoardMapping = [
     parentName: "Kal'dyne",
     subregions: ["Uchai Lagoon","Hat'moru","Waryck Jungle","Ridge of Vesirtin"]
   },
-    {
+  {
     parentId: "20",
     parentName: "Syhrda",
     subregions: ["Is'bel Woods","Lyrifu Lowlands","Zysaul Valley"]
+  },
+  {
+    parentId: "21",
+    parentName: "Vor'asa",
+    subregions: ["The South Rim","The North Rim","Dalv Glad","Eel's Tail River","Lod'nen Path","Adeli's Cove","SS Rilon","The Waste","Layrun Trench","Angitu Desert","Orvor Rock","West Delia Basin","North Delia Basin]
   }
   // Add other parent regions as needed
 ];
+
 
