@@ -94,6 +94,12 @@ const parentBoardMapping = [
     parentId: "19",
     parentName: "Kal'dyne",
     subregions: ["Uchai Lagoon","Hat'moru","Waryck Jungle","Ridge of Vesirtin"]
+  },
+    {
+    parentId: "20",
+    parentName: "Syhrda",
+    subregions: ["Is'bel Woods","Lyrifu Lowlands","Zysaul Valley"]
   }
   // Add other parent regions as needed
 ];
+
