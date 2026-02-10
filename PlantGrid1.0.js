@@ -76,21 +76,46 @@ function AnkP_passesLocationFilter(p, validLocations, includeAllAreas){
 /* ---------------------
    FOUND IN RESOLUTION
 --------------------- */
-function AnkP_resolveFoundIn(p, { parentBoardMapping = [], useParentBoard = true, validLocations = [], includeAllAreas = true }){
+/* ---------------------
+   FOUND IN RESOLUTION
+   (DISPLAY ONLY)
+--------------------- */
+function AnkP_resolveFoundIn(p, {
+  parentBoardMapping = [],
+  validLocations = [],
+  includeAllAreas = true,
+  collapseFoundInToParent = false
+} = {}){
   const foundIn = AnkP_arr(p.foundIn);
+
+  // Global plant
   if (foundIn.length === 0) return includeAllAreas ? ["All Areas"] : [];
 
-  if (!useParentBoard){
-    return foundIn.filter(loc => validLocations.length === 0 || validLocations.includes(loc));
+  // If a scope exists, prefer the intersection for display (nice on region pages)
+  let list = foundIn;
+  if (Array.isArray(validLocations) && validLocations.length){
+    const validNorm = validLocations.map(AnkP_norm).filter(Boolean);
+    const hits = foundIn.filter(loc => validNorm.includes(AnkP_norm(loc)));
+    if (hits.length) list = hits;
   }
 
-  const parents = new Set();
-  foundIn.forEach(loc => {
-    const parent = parentBoardMapping.find(m => Array.isArray(m.subregions) && m.subregions.includes(loc));
-    if (parent) parents.add(parent.parentName);
-  });
-  return parents.size ? Array.from(parents) : foundIn;
+  // Optional display collapse: subregions -> parent region names (for global guides)
+  if (collapseFoundInToParent && Array.isArray(parentBoardMapping) && parentBoardMapping.length){
+    const parents = new Set();
+    list.forEach(loc => {
+      const locN = AnkP_norm(loc);
+      const parent = parentBoardMapping.find(m =>
+        Array.isArray(m.subregions) && m.subregions.some(sr => AnkP_norm(sr) === locN)
+      );
+      if (parent?.parentName) parents.add(parent.parentName);
+    });
+    return parents.size ? Array.from(parents) : list;
+  }
+
+  // Default: show subregion names
+  return list;
 }
+
 
 /* ---------------------
    HELPFUL / HARMFUL
@@ -168,6 +193,8 @@ function renderSpeciesPlantGrid({
   parentBoardMapping = [],
   useParentBoard = true,
 
+  collapseFoundInToParent = false,
+
   plantsList
 }){
   const container = containerEl || (containerId ? document.getElementById(containerId) : null);
@@ -214,7 +241,13 @@ function renderSpeciesPlantGrid({
 
     .sort((a,b) => String(a.name||"").localeCompare(String(b.name||"")))
     .forEach(p => {
-      const foundInDisplay = AnkP_resolveFoundIn(p, { parentBoardMapping, useParentBoard, validLocations, includeAllAreas });
+      const foundInDisplay = AnkP_resolveFoundIn(p, {
+  parentBoardMapping,
+  validLocations,
+  includeAllAreas,
+  collapseFoundInToParent
+});
+
       const desc = String(p.description || "").trim();
 
       const metaLis = [
