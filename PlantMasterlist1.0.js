@@ -110,7 +110,7 @@ const plants = [
         scientific: "Betula Pendula",
         foundIn: [],
         description: "Pale, lean trees with shedding bark that can be found in most regions except the hottest deserts.",
-        seasons: ["Spring", "Summer", "Fall"],
+        seasons: ["Spring", "Summer", "Fall", "Winter"],
         skill: ["1"],
         potency: ["1"],
         beneficial: ["Bark"],
@@ -126,24 +126,45 @@ const plants = [
         uniqueuse: []
       },
       {
-        id: "testing",
-        name: "Demon Weed",
-        scientific: "Assicus Blasticus",
-        foundIn: ["Irengu Plains", "Craub"],
-        description: "It grows where the sun meets the earth when the world collapses into a wormhole of doom.",
-        seasons: ["Spring", "Summer", "Winter", "Fall"],
-        skill: ["8"],
-        potency: ["4"],
+        id: "bluelobelia",
+        name: "Blue Lobelia",
+        scientific: "Lobelia Siphilitica",
+        foundIn: [],
+        description: "Tall, purple flowers grow in groups with narrow, pointed leaves at the base of the stalk.",
+        seasons: ["Spring", "Summer"],
+        skill: ["4"],
+        potency: ["2"],
         beneficial: ["Flower"],
         poisonous: ["Leaves"],
                   
-        medicinal: ["Topical","Ingestion"],
-        treats: ["Pain","Accelerate Healing"],
+        medicinal: ["Ingestion","Topical"],
+        treats: ["Cough","Inflammation"],
       
         toxic: ["Ingestion"],
-        complications: ["Nausea","Death","Death but Harder"],
+        complications: ["Diarrhea","Vomiting","Nausea"],
 
-        native: ["Yes"],
-        uniqueuse: ["Character develops spontaneous heart disease. This is a test plant, please disregard."]
+        native: ["No"],
+        uniqueuse: []
+      },
+      {
+        id: "burdock",
+        name: "Burdock",
+        scientific: "Arctium Tomentosum",
+        foundIn: [],
+        description: "Grows near water and has jagged, triangular leaves. The plant grows magenta thistle-like blooms in the spring.",
+        seasons: ["Spring", "Summer"],
+        skill: ["3"],
+        potency: ["2"],
+        beneficial: ["Flowers"],
+        poisonous: [],
+                  
+        medicinal: ["Topical"],
+        treats: ["Bleeding"],
+      
+        toxic: [],
+        complications: [],
+
+        native: ["No"],
+        uniqueuse: []
       }
 ];
