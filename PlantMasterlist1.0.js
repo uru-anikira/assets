@@ -167,7 +167,7 @@ const plants = [
         native: ["No"],
         uniqueuse: []
       },
-          {
+      {
         id: "dummy",
         name: "Test Plant",
         scientific: "Troubleshooticus Maximus",
@@ -187,5 +187,47 @@ const plants = [
 
         native: ["Yes"],
         uniqueuse: ["Realigns the tingly bits."]
+      },
+      {
+        id: "catnip",
+        name: "Catnip",
+        scientific: "Nepeta Cataria",
+        foundIn: [],
+        description: "Grows in virtually all climates except the desert andn tundra. Plant is bushy with rounded, wide triangular leaves with crimped edges.",
+        seasons: ["Spring", "Summer","Fall"],
+        skill: ["2"],
+        potency: ["1"],
+        beneficial: ["Leaves"],
+        poisonous: ["Leaves"],
+                  
+        medicinal: ["Ingestion"],
+        treats: ["Fever","Skin Irritation"],
+      
+        toxic: ["Ingestion"],
+        complications: ["Anxiety"],
+
+        native: ["No"],
+        uniqueuse: []
+      },
+      {
+        id: "coneflower",
+        name: "Coneflower",
+        scientific: "Echinacea Purpurea",
+        foundIn: [],
+        description: "Grows in full sun clearings. Plant has bold pink/purple flowers with short, cone-shaped centers.",
+        seasons: ["Summer","Fall"],
+        skill: ["2"],
+        potency: ["1"],
+        beneficial: ["Leaves"],
+        poisonous: ["Flowers"],
+                  
+        medicinal: ["Topical"],
+        treats: ["Infection","Numbing"],
+      
+        toxic: ["Ingestion"],
+        complications: ["Vomiting","Dizziness"],
+
+        native: ["No"],
+        uniqueuse: []
       }
 ];
