@@ -70,16 +70,18 @@ function buildActivityGroups() {
 
         ['q1','q2','q3','q4'].forEach(q => {
             const qNum = parseInt(q[1], 10);
-            if (qNum > currentQuarter) return; // only show past/current quarters
+
+            // Only show the current quarter
+            if (qNum !== currentQuarter) return;
 
             const tag = `${group.slice(0,3).toLowerCase()}${q}`;
+
             if (activity[tag]) {
                 buttons += buildTagButton(tag, activity[tag]);
             }
         });
     });
 
-    // Return one combined section for all packs
     if (!buttons) return '';
 
     return `
