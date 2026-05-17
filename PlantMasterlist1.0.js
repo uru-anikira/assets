@@ -168,27 +168,6 @@ const plants = [
         uniqueuse: []
       },
       {
-        id: "dummy",
-        name: "Test Plant",
-        scientific: "Troubleshooticus Maximus",
-        foundIn: ["Tia'deli Mountains","Issimor Caverns","Rynack","Sands of Rodorr"],
-        description: "Hey look a plant.",
-        seasons: ["Spring", "Summer"],
-        skill: ["3"],
-        potency: ["2"],
-        beneficial: [],
-        poisonous: [],
-                  
-        medicinal: [],
-        treats: [],
-      
-        toxic: ["Flowers"],
-        complications: ["Gay Panic"],
-
-        native: ["Yes"],
-        uniqueuse: ["Realigns the tingly bits."]
-      },
-      {
         id: "catnip",
         name: "Catnip",
         scientific: "Nepeta Cataria",
@@ -229,5 +208,152 @@ const plants = [
 
         native: ["No"],
         uniqueuse: []
-      }
+      },
+        {
+        id: "dragonfruit",
+        name: "Dragonfruit",
+        scientific: "Selenicereus Undatus",
+        foundIn: [],
+        description: "A climbing cactus producing bright scaled fruit, commonly found in warm regions among dense vegetation.",
+        seasons: ["Summer"],
+        skill: ["3"],
+        potency: ["2"],
+        beneficial: ["Fruit"],
+        poisonous: [],
+                  
+        medicinal: ["Topical"],
+        treats: ["Infection","Inflammation"],
+      
+        toxic: [],
+        complications: [],
+    
+        native: ["No"],
+        uniqueuse: []
+    },
+    {
+        id: "ginger",
+        name: "Ginger",
+        scientific: "Zingiber Officinale",
+        foundIn: [],
+        description: "A fragrant root plant with long green stalks, commonly found in humid tropical regions and shaded forest floors.",
+        seasons: ["Spring", "Summer"],
+        skill: ["2"],
+        potency: ["1"],
+        beneficial: ["Root"],
+        poisonous: [],
+                  
+        medicinal: ["Ingestion"],
+        treats: ["Stomach Pain","Sore Throat"],
+      
+        toxic: [],
+        complications: [],
+    
+        native: ["No"],
+        uniqueuse: []
+    },
+    {
+        id: "ivy",
+        name: "Ivy",
+        scientific: "Hedera Helix",
+        foundIn: [],
+        description: "A creeping vine with dark green pointed leaves that spreads aggressively across trees, cliffs, and ruins.",
+        seasons: ["Spring", "Summer", "Fall"],
+        skill: ["4"],
+        potency: ["2"],
+        beneficial: ["Leaf"],
+        poisonous: ["Leaf"],
+                  
+        medicinal: ["Ingestion","Topical"],
+        treats: ["Depression","Pain"],
+      
+        toxic: ["Ingestion"],
+        complications: ["Addiction"],
+    
+        native: ["No"],
+        uniqueuse: []
+    },
+    {
+        id: "licoriceroot",
+        name: "Licorice Root",
+        scientific: "Glycyrrhiza Glabra",
+        foundIn: [],
+        description: "A flowering herb with long roots and pale purple blossoms, often found in temperate regions beneath partial tree cover.",
+        seasons: ["Spring", "Summer"],
+        skill: ["5"],
+        potency: ["3"],
+        beneficial: ["Root","Flower"],
+        poisonous: ["Leaf"],
+                  
+        medicinal: ["Ingestion"],
+        treats: ["Accelerate Healing","Reduce Toxicity"],
+      
+        toxic: ["Ingestion"],
+        complications: ["Death"],
+    
+        native: ["No"],
+        uniqueuse: []
+    },
+    {
+        id: "pricklypear",
+        name: "Prickly Pear Cactus",
+        scientific: "Opuntia Basilaris",
+        foundIn: [],
+        description: "A flat-padded cactus with sharp spines and brightly colored fruit, thriving in hot arid deserts.",
+        seasons: ["Summer"],
+        skill: ["2"],
+        potency: ["1"],
+        beneficial: ["Fruit"],
+        poisonous: [],
+                  
+        medicinal: ["Ingestion"],
+        treats: ["Sedative"],
+      
+        toxic: [],
+        complications: [],
+    
+        native: ["No"],
+        uniqueuse: []
+    },
+    {
+        id: "whitepoppy",
+        name: "White Poppy",
+        scientific: "Papaver Somniferum",
+        foundIn: [],
+        description: "A delicate pale flowering plant commonly found in open meadows and prairies among dense wildflowers.",
+        seasons: ["Spring", "Summer"],
+        skill: ["4"],
+        potency: ["3"],
+        beneficial: ["Flower","Stem"],
+        poisonous: [],
+                  
+        medicinal: ["Ingestion"],
+        treats: ["Pain","Anxiety"],
+      
+        toxic: [],
+        complications: [],
+    
+        native: ["No"],
+        uniqueuse: []
+    },
+    {
+        id: "dummy",
+        name: "Test Plant",
+        scientific: "Troubleshooticus Maximus",
+        foundIn: ["Tia'deli Mountains","Issimor Caverns","Rynack","Sands of Rodorr"],
+        description: "Hey look a plant.",
+        seasons: ["Spring", "Summer"],
+        skill: ["3"],
+        potency: ["2"],
+        beneficial: [],
+        poisonous: [],
+              
+        medicinal: [],
+        treats: [],
+        
+        toxic: ["Flowers"],
+        complications: ["Gay Panic"],
+        
+        native: ["Yes"],
+        uniqueuse: ["Realigns the tingly bits."]
+    }
 ];
