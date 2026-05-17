@@ -180,7 +180,7 @@ const plants = [
     poisonous: ["Leaves"],
               
     medicinal: ["Ingestion"],
-    treats: ["Fever","Skin Treatment"],
+    treats: ["Fever","Inflammation"],
   
     toxic: ["Ingestion"],
     complications: ["Anxiety"],
@@ -201,7 +201,7 @@ const plants = [
     poisonous: ["Flowers"],
               
     medicinal: ["Topical"],
-    treats: ["Skin Treatment","Pain"],
+    treats: ["Infection","Pain"],
   
     toxic: ["Ingestion"],
     complications: ["Vomiting","Dizziness"],
@@ -223,7 +223,7 @@ const plants = [
     poisonous: [],
               
     medicinal: ["Topical"],
-    treats: ["Skin Treatment","Inflammation"],
+    treats: ["Infection","Inflammation"],
   
     toxic: [],
     complications: [],
@@ -335,5 +335,132 @@ const plants = [
 
     native: ["No"],
     uniqueuse: []
+},
+{
+    id: "snowdrop",
+    name: "Snowdrop",
+    scientific: "Galanthus Nivalis",
+    foundIn: ["Irengu Plains", "Rynack"],
+    description: "A delicate white flowering plant that blooms in cold climates and often emerges through melting snow.",
+    seasons: ["Winter", "Spring"],
+    skill: ["2"],
+    potency: ["1"],
+    beneficial: ["Full Plant"],
+    poisonous: ["Full Plant"],
+              
+    medicinal: ["Topical"],
+    treats: ["Pain","Respiratory Issues"],
+  
+    toxic: ["Ingestion"],
+    complications: ["Nausea"],
+
+    native: ["Yes"],
+    uniqueuse: []
+},
+{
+    id: "bluespruce",
+    name: "Blue Spruce",
+    scientific: "Picea Pungens",
+    foundIn: ["Rynack"],
+    description: "A tall evergreen tree with blue-tinted needles and small medicinal cones and fruits.",
+    seasons: ["Spring", "Summer", "Fall"],
+    skill: ["3"],
+    potency: ["2"],
+    beneficial: ["Fruit"],
+    poisonous: [],
+              
+    medicinal: ["Ingestion"],
+    treats: ["Digestive Issues","Pain","Respiratory Issues"],
+  
+    toxic: [],
+    complications: [],
+
+    native: ["Yes"],
+    uniqueuse: []
+},
+{
+    id: "holly",
+    name: "Holly",
+    scientific: "Ilex Aquifolium",
+    foundIn: ["Irengu Plains", "Rynack", "Kalas Mountains"],
+    description: "A spiny-leafed evergreen shrub producing bright red berries commonly found in colder woodland regions.",
+    seasons: ["Fall", "Winter"],
+    skill: ["3"],
+    potency: ["2"],
+    beneficial: ["Fruit"],
+    poisonous: ["Leaf"],
+              
+    medicinal: ["Ingestion"],
+    treats: ["Respiratory Issues","Fever"],
+  
+    toxic: ["Ingestion"],
+    complications: ["Nausea","Internal Damage"],
+
+    native: ["Yes"],
+    uniqueuse: []
+},
+{
+    id: "japaneseyew",
+    name: "Japanese Yew",
+    scientific: "Taxus Cuspidata",
+    foundIn: [],
+    description: "A dark evergreen tree with red fruits and highly toxic bark and needles.",
+    seasons: ["Spring", "Summer", "Fall"],
+    skill: ["5"],
+    potency: ["3"],
+    beneficial: ["Fruit","Needles","Bark"],
+    poisonous: ["Needles","Bark","Seed"],
+              
+    medicinal: ["Ingestion","Topical"],
+    treats: ["Fever","Pain","Inflammation"],
+  
+    toxic: ["Ingestion"],
+    complications: ["Death"],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "crocus",
+    name: "Crocus",
+    scientific: "Crocus Sativus",
+    foundIn: ["Rynack"],
+    description: "A small purple flowering plant known for its vivid stamens and anti-inflammatory properties.",
+    seasons: ["Spring"],
+    skill: ["2"],
+    potency: ["1"],
+    beneficial: ["Flower"],
+    poisonous: [],
+              
+    medicinal: ["Ingestion"],
+    treats: ["Inflammation","Pain"],
+  
+    toxic: [],
+    complications: [],
+
+    native: ["Yes"],
+    uniqueuse: []
+},
+{
+    id: "winterberry",
+    name: "Winterberry",
+    scientific: "Ilex Verticillata",
+    foundIn: ["Rynack"],
+    description: "A bright red berried shrub thriving in cold wetlands and snowy woodland regions.",
+    seasons: ["Fall", "Winter"],
+    skill: ["4"],
+    potency: ["2"],
+    beneficial: ["Bark","Fruit"],
+    poisonous: [],
+              
+    medicinal: ["Topical","Ingestion"],
+    treats: ["Infection","Digestive Issues"],
+  
+    toxic: ["Ingestion"],
+    complications: ["Addiction"],
+
+    native: ["Yes"],
+    uniqueuse: []
 }
+];
 ];
