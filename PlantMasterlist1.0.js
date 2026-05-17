@@ -354,7 +354,7 @@ const plants = [
     toxic: ["Ingestion"],
     complications: ["Nausea"],
 
-    native: ["Yes"],
+    native: ["No"],
     uniqueuse: []
 },
 {
@@ -375,7 +375,7 @@ const plants = [
     toxic: [],
     complications: [],
 
-    native: ["Yes"],
+    native: ["No"],
     uniqueuse: []
 },
 {
@@ -396,7 +396,7 @@ const plants = [
     toxic: ["Ingestion"],
     complications: ["Nausea","Internal Damage"],
 
-    native: ["Yes"],
+    native: ["No"],
     uniqueuse: []
 },
 {
@@ -438,7 +438,7 @@ const plants = [
     toxic: [],
     complications: [],
 
-    native: ["Yes"],
+    native: ["No"],
     uniqueuse: []
 },
 {
@@ -459,7 +459,7 @@ const plants = [
     toxic: ["Ingestion"],
     complications: ["Addiction"],
 
-    native: ["Yes"],
+    native: ["No"],
     uniqueuse: []
 }
 ];
