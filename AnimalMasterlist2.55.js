@@ -3,7 +3,7 @@ const animals = [
     id: "moose",
     name: "Moose",
     image: "https://i.imgur.com/sr4mssV.png",
-    foundIn: ["Irengu Plains", "Kalas Mountains", "Rynack", "Lerelm", "Tia'deli Mountains", "Xayar Forest", "Issimor Caverns"],
+    foundIn: ["Irengu Plains", "Kalas Mountains", "Rynack", "Lerelm", "Tia'deli Mountains", "Xayar Forest", "Issimor Caverns","Nyjoro Hills"],
     weight: ["1200-1600 pounds"],
     size: ["Extra Large"],
     classification: ["Prey"],
@@ -450,7 +450,7 @@ const animals = [
   {
     id: "cottontailrabbit",
     name: "Desert Cottontail",
-    image: "",
+    image: "https://i.imgur.com/IEwwxWj.png",
     foundIn: [ "Is'bel Woods", "Tia'deli Mountains" ],
     weight: [ "2-4 pounds" ],
     size: [ "Extra Small" ],
@@ -485,7 +485,7 @@ const animals = [
   {
     id: "barrengroundcaribou",
     name: "Barren-ground Caribou",
-    image: "",
+    image: "https://i.imgur.com/snY3VDa.png",
     foundIn: [ "Nyjoro Hills" ],
     weight: [ "200-350 pounds" ],
     size: [ "Large" ],
@@ -500,25 +500,6 @@ const animals = [
 
     skilljuvenile: [ "7" ],
     foodjuvenile: [ "6" ]
-  },
-  {
-    id: "alaskanmoose",
-    name: "Alaskan Moose",
-    image: "",
-    foundIn: [ "Nyjoro Hills" ],
-    weight: [ "900-1600 pounds" ],
-    size: [ "Extra Large" ],
-    classification: [ "Prey" ],
-
-    companion: [],
-    companionsize: [],
-
-    skill: [ "17" ],
-    food: [ "14" ],
-    partysize: [ "3 (6+ mo. old)" ],
-
-    skilljuvenile: [ "12" ],
-    foodjuvenile: [ "10" ]
   },
   {
     id: "northamericanbeaver",
@@ -542,7 +523,7 @@ const animals = [
   {
     id: "laketrout",
     name: "Lake Trout",
-    image: "",
+    image: "https://i.imgur.com/Hcf4Oms.png",
     foundIn: [ "Ahyrd's Atoll", "Aughgar River", "Craub", "Ia'gha Lake", "Nyspoli's Pool", "Ryren Beach", "Shores of Lye", "Veins of Koraff" ],
     weight: [ "5-40 pounds" ],
     size: [ "Small" ],
@@ -558,7 +539,7 @@ const animals = [
   {
     id: "beltedkingfisher",
     name: "Belted Kingfisher",
-    image: "",
+    image: "https://i.imgur.com/fWTJZRz.png",
     foundIn: [ "Ryren Beach" ],
     weight: [ "0.25-0.4 pounds" ],
     size: [ "Extra Small" ],
@@ -593,7 +574,7 @@ const animals = [
   {
     id: "blacktailedprairiedog",
     name: "Black-tailed Prairie Dog",
-    image: "",
+    image: "https://i.imgur.com/kDrnDtm.png",
     foundIn: [ "Bel Veldt", "Boryz Prairie" ],
     weight: [ "1.5-3 pounds" ],
     size: [ "Extra Small" ],
@@ -642,7 +623,7 @@ const animals = [
   {
     id: "harborseal",
     name: "Harbor Seal",
-    image: "",
+    image: "https://i.imgur.com/2ITPnEZ.png",
     foundIn: [ "Shores of Lye" ],
     weight: [ "120-370 pounds" ],
     size: [ "Extra Large" ],
@@ -661,7 +642,7 @@ const animals = [
   {
     id: "californiasealion",
     name: "California Sea Lion",
-    image: "",
+    image: "https://i.imgur.com/tEegz1A.png",
     foundIn: [ "Shores of Lye" ],
     weight: [ "180-800 pounds" ],
     size: [ "Extra Large" ],
@@ -728,7 +709,7 @@ const animals = [
   {
     id: "americanbadger",
     name: "American Badger",
-    image: "",
+    image: "https://i.imgur.com/DZk8hp4.png",
     foundIn: [ "Sana Sarsys" ],
     weight: [ "15-26 pounds" ],
     size: [ "Small" ],
@@ -760,7 +741,7 @@ const animals = [
   {
     id: "greeniguana",
     name: "Green Iguana",
-    image: "",
+    image: "https://i.imgur.com/MHXCLiD.png",
     foundIn: [ "The Stone Forest" ],
     weight: [ "8-17 pounds" ],
     size: [ "Small" ],
@@ -792,7 +773,7 @@ const animals = [
   {
     id: "greathornedowl",
     name: "Great Horned Owl",
-    image: "",
+    image: "https://i.imgur.com/MYMFqL4.png",
     foundIn: [ "Dyndre's Swamp", "Is'bel Woods", "Ryren Beach", "The Stone Forest", "Tor's Marsh" ],
     weight: [ "3-4 pounds" ],
     size: [ "Extra Small" ],
@@ -824,7 +805,7 @@ const animals = [
   {
     id: "mallard",
     name: "Mallard",
-    image: "",
+    image: "https://i.imgur.com/zq3IRi1.png",
     foundIn: [ "Tor's Marsh" ],
     weight: [ "2-3.5 pounds" ],
     size: [ "Extra Small" ],
@@ -840,7 +821,7 @@ const animals = [
   {
     id: "indianpeafowl",
     name: "Indian Peafowl",
-    image: "",
+    image: "https://i.imgur.com/Rtwna1h.png",
     foundIn: [ "Xorij Savannah" ],
     weight: [ "8-13 pounds" ],
     size: [ "Extra Small" ],
@@ -856,7 +837,7 @@ const animals = [
   {
     id: "bullfrog",
     name: "American Bullfrog",
-    image: "",
+    image: "https://i.imgur.com/4jfvvkW.png",
     foundIn: [ "Craub" ],
     weight: [ "0.5-1.5 pounds" ],
     size: [ "Extra Small" ],
@@ -872,7 +853,7 @@ const animals = [
   {
     id: "dungbeetle",
     name: "Dung Beetle",
-    image: "",
+    image: "https://i.imgur.com/y1C7h7L.png",
     foundIn: [ "Sands of Rodorr" ],
     weight: [ "0.01-0.1 pounds" ],
     size: [ "Extra Small" ],
@@ -888,7 +869,7 @@ const animals = [
   {
     id: "greaterprairiechicken",
     name: "Greater Prairie Chicken",
-    image: "",
+    image: "https://i.imgur.com/fNpz8X8.png",
     foundIn: [ "Sana Sarsys" ],
     weight: [ "1.5-3 pounds" ],
     size: [ "Extra Small" ],
@@ -923,7 +904,7 @@ const animals = [
   {
     id: "feralhorse",
     name: "Feral Horse",
-    image: "",
+    image: "https://i.imgur.com/IK9kOC8.png",
     foundIn: [ "Zysaul Valley" ],
     weight: [ "800-1200 pounds" ],
     size: [ "Extra Large" ],
@@ -942,7 +923,7 @@ const animals = [
   {
     id: "gartersnake",
     name: "Garter Snake",
-    image: "",
+    image: "https://i.imgur.com/agZ28gn.png",
     foundIn: [ "Sands of Rodorr" ],
     weight: [ "0.2-0.6 pounds" ],
     size: [ "Extra Small" ],
@@ -974,7 +955,7 @@ const animals = [
   {
     id: "bandedseakrait",
     name: "Banded Sea Krait",
-    image: "",
+    image: "https://i.imgur.com/Znef8dJ.png",
     foundIn: [ "The Serpent's Tongue" ],
     weight: [ "1-4 pounds" ],
     size: [ "Extra Small" ],
@@ -990,7 +971,7 @@ const animals = [
   {
     id: "bluemussel",
     name: "Blue Mussel",
-    image: "",
+    image: "https://i.imgur.com/kLKZcr7.png",
     foundIn: [ "Veins of Koraff" ],
     weight: [ "0.1-1 pounds" ],
     size: [ "Extra Small" ],
@@ -1079,7 +1060,7 @@ const animals = [
   {
     id: "cheetah",
     name: "Cheetah",
-    image: "",
+    image: "https://i.imgur.com/vlNbxzN.png",
     foundIn: [ "Xorij Savannah" ],
     weight: [ "75-140 pounds" ],
     size: [ "Mid-Large" ],
