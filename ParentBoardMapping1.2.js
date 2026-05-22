@@ -17,10 +17,9 @@ const parentBoardMapping = [
   {
     parentId: "4",
     parentName: "Caurus",
-    subregions: ["Nytyte River","Desmir's Tree","The Shydar","Niall Caverns"]
+    subregions: ["Nytyte River","Desmir's Tree","Siscarm's Garden","Kiaou Mines","Niall Caverns","Ryn-Eldbel"]
   },
-  {
-    
+  { 
     parentId: "5",
     parentName: "Kamari",
     subregions: ["Chamoru Plains","Xin Grotto","Kalus's Point","On-aldirr Crevice"]
@@ -28,12 +27,12 @@ const parentBoardMapping = [
   {
     parentId: "6",
     parentName: "Vesyth",
-    subregions: ["Enackir Hot Springs","Boryz Prairie","Grove of Sari","The Eye of Fenris"]
+    subregions: ["Enackir Hot Springs","Boryz Prairie","Grove of Sari","The Eye of Fenris","Is'bel Woods","Lyrifu Lowlands","Zysaul Valley","East Drarynough"]
   },
   {
     parentId: "7",
     parentName: "Ryner",
-    subregions: ["Usstor","Pievunt-An","Ryren Beach","Omdyn"]
+    subregions: ["Forgotten Underway","Usstor","Pievunt-An","An'ris Woods"]
   },
   {
     parentId: "8",
@@ -53,7 +52,7 @@ const parentBoardMapping = [
   {
     parentId: "11",
     parentName: "Ina'mos",
-    subregions: ["Liandry Falls","Ahyrd's Atoll","Dyndre's Swamp","Bel Veldt"]
+    subregions: ["Liandry Falls","Ahyrd's Atoll","Dyndre's Swamp","Bel Veldt","Adeli's Cove","The Waste"]
   },
   {
     parentId: "12",
@@ -63,7 +62,7 @@ const parentBoardMapping = [
   {
     parentId: "13",
     parentName: "The Occasus",
-    subregions: ["Craub","Aughgar River","Sands of Rodorr","Isdyn's Deep"]
+    subregions: ["Craub","Aughgar River","Sands of Rodorr","Isdyn's Deep","Lod'nen Path"]
   },
   {
     parentId: "14",
@@ -88,7 +87,7 @@ const parentBoardMapping = [
   {
     parentId: "18",
     parentName: "Ale'ina",
-    subregions: ["Aisu Dunes","Delia Basin","The Chimera's Iris","Vorenal River"]
+    subregions: [,"Delia Basin","Layrun Trench","Angitu Desert","Orvor Rock","Dragon's Mouth"]
   },
   {
     parentId: "19",
@@ -97,13 +96,13 @@ const parentBoardMapping = [
   },
   {
     parentId: "20",
-    parentName: "Syhrda",
-    subregions: ["Is'bel Woods","Lyrifu Lowlands","Zysaul Valley"]
+    parentName: "Ser'eri",
+    subregions: ["The Tears of Lyeina","Deline Caverns","The Chimera's Iris","Vorenal River","East Delia Basin","Geysers of Nysm"]
   },
   {
     parentId: "21",
-    parentName: "Vor'asa",
-    subregions: ["The South Rim","The North Rim","Dalv Glad","Eel's Tail River","Lod'nen Path","Adeli's Cove","SS Rilon","The Waste","Layrun Trench","Angitu Desert","Orvor Rock","West Delia Basin","North Delia Basin"]
+    parentName: "Contested Regions",
+    subregions: ["Aisu Dunes","Alesiul Crossing","SS Rilon","Ender's Isle","Carinne Hollow","Ongar Cliffs","The Shydar","Angel's Fangs","Omdyn","Ryren Beach","Somani Island","Dalv Glad","Eel's Tail River"]
   }
   // Add other parent regions as needed
 ];
