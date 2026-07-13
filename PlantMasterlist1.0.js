@@ -871,7 +871,7 @@ const plants = [
     skill: ["12"],
     potency: ["5"],
     beneficial: [],
-    poisonous: ["Leaves"],
+    poisonous: [],
               
     medicinal: [],
     treats: [],
@@ -901,7 +901,7 @@ const plants = [
     complications: ["Nausea","Vomiting"],
 
     native: ["Yes"],
-    uniqueuse: ["Eliminates the effects of fertility issues in an adult, if no existing fertility issues allows one free conception re-roll (per parent that has been dosed). Persists for one heat cycle (females) and no more than 6 months OOC (males). Consumer must have at least 8 skill by third dose to gain benefits, otherwise results in nausea and vomiting."]
+    uniqueuse: ["Eliminates the effects of fertility issues in an adult, if no existing fertility issues allows one free conception re-roll (per parent that has been dosed). Persists for one heat cycle (females) or 6 months OOC (males). Consumer must have at least 8 skill, otherwise experiences complications."]
 },
 {
     id: "wintercap",
