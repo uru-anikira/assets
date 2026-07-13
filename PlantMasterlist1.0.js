@@ -42,6 +42,27 @@ const plants = [
     uniqueuse: []
 },
 {
+    id: "aloevera",
+    name: "Aloe Vera",
+    scientific: "Aloe Vera",
+    foundIn: [],
+    description: "A succulent with thick, fleshy green leaves filled with cooling gel, thriving in hot, dry environments.",
+    seasons: ["Spring", "Summer", "Fall", "Winter"],
+    skill: ["3"],
+    potency: ["1"],
+    beneficial: ["Leaves"],
+    poisonous: ["Leaves"],
+
+    medicinal: ["Topical"],
+    treats: ["Burns","Wound Healing","Inflammation"],
+
+    toxic: ["Ingestion"],
+    complications: ["Early Contractions"],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
     id: "angelica",
     name: "Angelica",
     scientific: "Angelica Archangelica",
@@ -442,6 +463,27 @@ const plants = [
     uniqueuse: []
 },
 {
+    id: "waterhemlock",
+    name: "Water Hemlock",
+    scientific: "Cicuta Maculata",
+    foundIn: [],
+    description: "A tall wetland plant with umbrella-shaped clusters of small white flowers and hollow purple-streaked stems.",
+    seasons: ["Spring", "Summer"],
+    skill: ["7"],
+    potency: ["4"],
+    beneficial: [],
+    poisonous: ["Root","Leaves","Stem"],
+
+    medicinal: [],
+    treats: [],
+
+    toxic: ["Ingestion"],
+    complications: ["Convulsions","Respiratory Failure","Death"],
+
+    native: ["Yes"],
+    uniqueuse: []
+},
+{
     id: "winterberry",
     name: "Winterberry",
     scientific: "Ilex Verticillata",
@@ -458,6 +500,342 @@ const plants = [
   
     toxic: ["Ingestion"],
     complications: ["Addiction"],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "rue",
+    name: "Rue",
+    scientific: "Ruta Graveolens",
+    foundIn: [],
+    description: "A shrubby herb with bluish-green leaves and clusters of small yellow flowers that release a strong aroma when crushed.",
+    seasons: ["Spring","Summer"],
+    skill: ["5"],
+    potency: ["3"],
+    beneficial: ["Leaves","Flower"],
+    poisonous: ["Leaves"],
+
+    medicinal: ["Topical","Ingestion"],
+    treats: ["Inflammation","Digestive Issues"],
+
+    toxic: ["Ingestion"],
+    complications: ["Vomiting","Photosensitivity","Miscarriage"],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "chamomile",
+    name: "Chamomile",
+    scientific: "Matricaria Chamomilla",
+    foundIn: [],
+    description: "Small white daisy-like flowers with bright yellow centers growing in open meadows and fields.",
+    seasons: ["Spring","Summer"],
+    skill: ["2"],
+    potency: ["1"],
+    beneficial: ["Flower"],
+    poisonous: [],
+
+    medicinal: ["Ingestion","Inhalation"],
+    treats: ["Sedative","Digestive Issues","Inflammation"],
+
+    toxic: [],
+    complications: [],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "feverfew",
+    name: "Feverfew",
+    scientific: "Tanacetum Parthenium",
+    foundIn: [],
+    description: "A bushy herb bearing clusters of small white flowers with yellow centers and fragrant, deeply divided leaves.",
+    seasons: ["Spring","Summer"],
+    skill: ["3"],
+    potency: ["2"],
+    beneficial: ["Flower","Leaves"],
+    poisonous: [],
+
+    medicinal: ["Ingestion"],
+    treats: ["Fever","Pain","Inflammation"],
+
+    toxic: [],
+    complications: [],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "goldenseal",
+    name: "Goldenseal",
+    scientific: "Hydrastis Canadensis",
+    foundIn: [],
+    description: "A woodland plant with broad wrinkled leaves and a single small greenish-white flower that develops into a red berry.",
+    seasons: ["Spring","Summer"],
+    skill: ["5"],
+    potency: ["3"],
+    beneficial: ["Root"],
+    poisonous: [],
+
+    medicinal: ["Ingestion","Topical"],
+    treats: ["Infection","Digestive Issues"],
+
+    toxic: [],
+    complications: [],
+
+    native: ["Yes"],
+    uniqueuse: []
+},
+{
+    id: "valerian",
+    name: "Valerian",
+    scientific: "Valeriana Officinalis",
+    foundIn: [],
+    description: "A tall flowering herb with clusters of fragrant pale pink blossoms and deeply divided leaves.",
+    seasons: ["Spring","Summer"],
+    skill: ["4"],
+    potency: ["2"],
+    beneficial: ["Root"],
+    poisonous: ["Root"],
+
+    medicinal: ["Ingestion"],
+    treats: ["Sedative","Anxiety"],
+
+    toxic: ["Ingestion"],
+    complications: ["Drowsiness"],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "calendula",
+    name: "Calendula",
+    scientific: "Calendula Officinalis",
+    foundIn: [],
+    description: "Bright orange or yellow daisy-like flowers that bloom abundantly in sunny meadows and gardens.",
+    seasons: ["Spring","Summer","Fall"],
+    skill: ["4"],
+    potency: ["2"],
+    beneficial: ["Flower"],
+    poisonous: [],
+
+    medicinal: ["Topical"],
+    treats: ["Wound Healing","Inflammation"],
+
+    toxic: [],
+    complications: [],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "thyme",
+    name: "Thyme",
+    scientific: "Thymus Vulgaris",
+    foundIn: [],
+    description: "A low-growing aromatic herb with tiny oval leaves and small purple flowers on woody stems.",
+    seasons: ["Spring","Summer"],
+    skill: ["1"],
+    potency: ["1"],
+    beneficial: ["Leaves"],
+    poisonous: [],
+
+    medicinal: ["Ingestion","Inhalation"],
+    treats: ["Respiratory Issues","Infection"],
+
+    toxic: [],
+    complications: [],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "turmeric",
+    name: "Turmeric",
+    scientific: "Curcuma Longa",
+    foundIn: [],
+    description: "A tropical plant with broad green leaves grown primarily for its vibrant orange underground rhizomes.",
+    seasons: ["Spring","Summer"],
+    skill: ["6"],
+    potency: ["4"],
+    beneficial: ["Root"],
+    poisonous: [],
+
+    medicinal: ["Ingestion","Topical"],
+    treats: ["Inflammation","Pain"],
+
+    toxic: [],
+    complications: [],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "wormwood",
+    name: "Wormwood",
+    scientific: "Artemisia Absinthium",
+    foundIn: [],
+    description: "A silvery-green herb with feathery leaves and small yellow flower clusters, known for its bitter aroma.",
+    seasons: ["Spring","Summer"],
+    skill: ["8"],
+    potency: ["5"],
+    beneficial: ["Leaves"],
+    poisonous: ["Leaves"],
+
+    medicinal: ["Ingestion"],
+    treats: ["Digestive Issues"],
+
+    toxic: ["Ingestion"],
+    complications: ["Hallucinations","Seizures"],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "nightshade",
+    name: "Nightshade",
+    scientific: "Atropa Belladonna",
+    foundIn: [],
+    description: "A branching perennial with dull purple bell-shaped flowers and glossy black berries hidden beneath broad leaves.",
+    seasons: ["Spring","Summer"],
+    skill: ["10"],
+    potency: ["5"],
+    beneficial: ["Leaves"],
+    poisonous: ["Leaves","Berries","Root"],
+
+    medicinal: ["Topical"],
+    treats: ["Pain"],
+
+    toxic: ["Ingestion"],
+    complications: ["Hallucinations","Paralysis","Death"],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "baneberry",
+    name: "Baneberry",
+    scientific: "Actaea Pachypoda",
+    foundIn: [],
+    description: "A woodland plant producing clusters of white flowers followed by distinctive white berries with black dots.",
+    seasons: ["Spring","Summer"],
+    skill: ["9"],
+    potency: ["5"],
+    beneficial: [],
+    poisonous: ["Berries","Root"],
+
+    medicinal: [],
+    treats: [],
+
+    toxic: ["Ingestion"],
+    complications: ["Cardiac Arrest","Vomiting"],
+
+    native: ["Yes"],
+    uniqueuse: []
+},
+{
+    id: "deathcamas",
+    name: "Death Camas",
+    scientific: "Toxicoscordion Venenosum",
+    foundIn: [],
+    description: "A grass-like plant with narrow leaves and clusters of cream-colored star-shaped flowers growing from a bulb.",
+    seasons: ["Spring"],
+    skill: ["10"],
+    potency: ["5"],
+    beneficial: [],
+    poisonous: ["Bulb","Leaves"],
+
+    medicinal: [],
+    treats: [],
+
+    toxic: ["Ingestion"],
+    complications: ["Respiratory Failure","Death"],
+
+    native: ["Yes"],
+    uniqueuse: []
+},
+{
+    id: "firethorn",
+    name: "Firethorn",
+    scientific: "Pyracantha Coccinea",
+    foundIn: [],
+    description: "A thorny evergreen shrub bearing clusters of white flowers and bright orange-red berries.",
+    seasons: ["Spring","Summer","Fall"],
+    skill: ["6"],
+    potency: ["3"],
+    beneficial: ["Berries"],
+    poisonous: ["Thorns"],
+
+    medicinal: ["Ingestion"],
+    treats: ["Fatigue"],
+
+    toxic: ["External"],
+    complications: ["Infection"],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "stingingnettle",
+    name: "Stinging Nettle",
+    scientific: "Urtica Dioica",
+    foundIn: [],
+    description: "A tall leafy plant covered in fine stinging hairs that grows in dense patches near water and disturbed ground.",
+    seasons: ["Spring","Summer"],
+    skill: ["4"],
+    potency: ["2"],
+    beneficial: ["Leaves"],
+    poisonous: ["Leaves"],
+
+    medicinal: ["Ingestion","Topical"],
+    treats: ["Inflammation","Pain"],
+
+    toxic: ["Topical"],
+    complications: ["Skin Irritation"],
+
+    native: ["Yes"],
+    uniqueuse: []
+},
+{
+    id: "wolfbane",
+    name: "Wolfbane",
+    scientific: "Aconitum Napellus",
+    foundIn: [],
+    description: "A tall plant with deeply divided leaves and striking blue-purple hooded flowers.",
+    seasons: ["Summer","Fall"],
+    skill: ["10"],
+    potency: ["5"],
+    beneficial: [],
+    poisonous: ["Root","Flower","Leaves"],
+
+    medicinal: [],
+    treats: [],
+
+    toxic: ["Ingestion","Topic"],
+    complications: ["Paralysis","Cardiac Arrest","Death"],
+
+    native: ["No"],
+    uniqueuse: []
+},
+{
+    id: "manchineel",
+    name: "Manchineel",
+    scientific: "Hippomane Mancinella",
+    foundIn: [],
+    description: "A coastal tree with glossy green leaves and small apple-like fruits, producing a highly caustic white sap.",
+    seasons: ["Spring","Summer","Fall"],
+    skill: ["10"],
+    potency: ["5"],
+    beneficial: [],
+    poisonous: ["Sap","Fruit","Leaves","Bark"],
+
+    medicinal: [],
+    treats: [],
+
+    toxic: ["External","Ingestion"],
+    complications: ["Severe Burns","Blindness","Death"],
 
     native: ["No"],
     uniqueuse: []
