@@ -839,5 +839,89 @@ const plants = [
 
     native: ["No"],
     uniqueuse: []
+},
+{
+    id: "deathweed",
+    name: "Death Weed",
+    scientific: "Oculi Mortis",
+    foundIn: ["Selunari Expanse","Isdyn's Deep","Usstor","Craub","Caverns of Avee"],
+    description: "A sickly, dark grey plant with rounded leaves that grows only deep in caverns in areas of extreme temperature. Consuming more than three times in a year will result in death. Must be properly instructed to identify.",
+    seasons: ["Spring","Summer","Fall","Winter"],
+    skill: ["15"],
+    potency: ["5"],
+    beneficial: [],
+    poisonous: ["Leaves"],
+              
+    medicinal: [],
+    treats: [],
+  
+    toxic: ["Ingestion"],
+    complications: ["Hallucinations","Death"],
+
+    native: ["Yes"],
+    uniqueuse: ["Allows user to see ghosts within a single thread. Character must have at least 4 medicine skill to consume. Those with insufficient skill will experience hallucinations."]
+},
+{
+    id: "suppressiongrass",
+    name: "Suppression Grass",
+    scientific: "Famem Minuere",
+    foundIn: ["Olum Karst","Ghost Plains"],
+    description: "Spiny, crunchy brown pointed grass sprouting from a single stalk growing in dry, arid regions. Only present in Ghost Plains during Fall. Must be properly instructed to identify.",
+    seasons: ["Summer","Fall"],
+    skill: ["12"],
+    potency: ["5"],
+    beneficial: [],
+    poisonous: ["Leaves"],
+              
+    medicinal: [],
+    treats: [],
+  
+    toxic: [],
+    complications: [],
+
+    native: ["Yes"],
+    uniqueuse: ["When harvested, allots for food coverage for up to 3 wolves (not subject to the 50% hunting rule) in addition to the foraging coverage."]
+},
+{
+    id: "proproot",
+    name: "Propagation Root",
+    scientific: "Maiores Probabilitates",
+    foundIn: ["Dyndre's Swamp","Rixetun Plains","Uchai Lagoon","Ghost Plains"],
+    description: "A deep purple root dug out of freshwater swamps and wetlands. Only present in Ghost Plains during Summer. Must be properly instructed to identify.",
+    seasons: ["Spring","Summer","Fall"],
+    skill: ["13"],
+    potency: ["4"],
+    beneficial: [],
+    poisonous: ["Root"],
+              
+    medicinal: [],
+    treats: [],
+  
+    toxic: ["Ingestion"],
+    complications: ["Nausea","Vomiting"],
+
+    native: ["Yes"],
+    uniqueuse: ["Eliminates the effects of fertility issues in an adult, if no existing fertility issues allows one free conception re-roll (per parent that has been dosed). Persists for one heat cycle (females) and no more than 6 months OOC (males). Consumer must have at least 8 skill by third dose to gain benefits, otherwise results in nausea and vomiting."]
+},
+{
+    id: "wintercap",
+    name: "Winter Cap Mushroom",
+    scientific: "Mutationes Congelatae",
+    foundIn: ["Tia'deli Mountains","The Kinath","Carinne Hollow","Rynack"],
+    description: "Dark blue mushroom caps found beneath trees in areas where the ground is consistently cold. Must be properly instructed to identify.",
+    seasons: ["Spring","Summer","Fall","Winter"],
+    skill: ["9"],
+    potency: ["2"],
+    beneficial: [],
+    poisonous: [],
+              
+    medicinal: [],
+    treats: [],
+  
+    toxic: [],
+    complications: [],
+
+    native: ["Yes"],
+    uniqueuse: ["Doubles the chance of a random mutation (not birth defect) in the next litter conceived by the character. Can stack to a maximum of 1 in 4 chance if both parents consume."]
 }
 ];
